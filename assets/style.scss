@@ -45,7 +45,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
+  /*
   text-align: center;
+  */
 
   @include mobile {
     line-height: 1.4;
@@ -59,10 +61,15 @@ h1 {
   }
 }
 
+h1.title {
+  text-align: center;
+}
+
 h2 {
   font-size: 24px;
 }
 
+/*
 @media (min-width: 769px){
 	.post h2::before, .post h2::after {
 	    content: "";
@@ -74,6 +81,7 @@ h2 {
 	    margin: 0px 30px;
 	}
 }
+*/
 
 h3 {
   font-size: 20px;
@@ -135,6 +143,18 @@ table tr td :last-child {
     line-height: 0.75em;
 }*/
 
+.entry {
+
+  margin-top: 16px;
+
+  .source {
+    font-size: 90%;
+    font-style: italic;
+    margin-top: 30px;
+  }
+
+}
+
 #search-container {
   text-align: center;
 }
@@ -178,9 +198,10 @@ span[data-pullquote]:before {
 
 a {
   color: $blue;
-  text-decoration: none;
+  text-decoration: underline;
 	cursor: pointer;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $blue;
   }
 }
@@ -308,11 +329,15 @@ p > img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
+  font-family: $roboto;
+  font-weight: 600;
   font-size: 28px;
   letter-spacing: 1px;
   text-align: left;
+
+  a {
+    text-decoration: none;
+  }
 
   @include mobile {
     text-align: center;
@@ -321,8 +346,8 @@ p > img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
+  color: #bbb;
+  font-size: 14px;
 
   @include mobile {
     margin: 3px 0;
@@ -331,8 +356,7 @@ p > img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $roboto;
   font-size: 18px;
 
   @include mobile {
@@ -346,8 +370,9 @@ nav {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
-    font-weight: 300;
+    font-weight: bold;
     letter-spacing: 1px;
+    text-decoration: none;
 
     @include mobile {
       margin: 0 10px;
@@ -371,15 +396,6 @@ nav {
 }
 
 .post {
-  blockquote {
-    margin: 1.8em .8em;
-    /*border-left: 2px solid $gray;*/
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-    background-color: #ede1ff;
-  }
 
   .you-may-like{
     margin: 1.8em .8em;
@@ -401,48 +417,86 @@ nav {
   }
 }
 
+.post,
+.page {
+
+  blockquote {
+    font-size: 90%;
+    border-left: 3px solid $gray;
+    padding: 12px 20px;
+    background-color: #99999922;
+  }
+
+}
+
 .wrapper-container {
   min-height: 100%;
   position: relative;
 }
 
 .wrapper-main {
-  padding-bottom: 134px;
+  padding-bottom: 135px;
 }
 
 .wrapper-footer {
   position: absolute;
-  bottom: 0;
+  bottom: 35px;
   width: 100%;
-  height: 89px;
+  height: 80px;
   background-color: $lightGray;
+
+  .credits {
+    font-size: 10px;
+    text-align: center;
+  }
+
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
+
+  .icons {
+    margin: auto 10px;
+  }
+
 }
 
 body:after {
-    background: linear-gradient(to right, #ffffff   0, #2196F3   33%, #E91E63   66%, #000 100%);
-    width: 100%;
-    height: 5px;
-    top: 0;
-    position: absolute;
-    left: 0;
-    content: '';
+  background: linear-gradient(to right, #ffffff   0, #2196F3   33%, #E91E63   66%, #000 100%);
+  width: 100%;
+  height: 5px;
+  top: 0;
+  position: absolute;
+  left: 0;
+  content: '';
 }
 
 #bar {
-    background: #000;
-    height: 7px;
-    background-size: cover;
-    background-position: left 60%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1000;
+  background: #000;
+  height: 7px;
+  background-size: cover;
+  background-position: left 60%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#archives {
+
+  .archive-item {
+    margin-left: 20px;
+
+    h3 {
+      line-height: 1.5;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+
+  }
+
 }
 
 .post h1{
@@ -463,13 +517,13 @@ body:after {
   line-height: 1.2;
 }
 
-.author_title{
+.author_title {
   text-align: center;
   color: #939aa1;
   letter-spacing: 2px;
 }
 
-.post_date{
+.post_date {
   text-align: center;
   color: #939aa1;
 }
@@ -488,6 +542,62 @@ body:after {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
+
+
+//
+// Github issues
+//
+
+.github-issues {
+
+  .issue-total {
+    font-size: 90%;
+    margin-bottom: 10px;
+  }
+
+  .issue {
+
+    .issue-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .issue-created {
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    .issue-text {
+      font-size: 16px;
+    }
+
+    margin-bottom: 10px;
+
+  }
+
+}
+
+.github-issues .issue-wrap {
+  margin-bottom: 20px;
+}
+
+.github-issues .bug {
+
+  .issue-title::before {
+    content: "🐞 ";
+  }
+
+}
+
+.github-issues .idea {
+
+  .issue-title::before {
+    content: "💡 ";
+  }
+
+}
+
+
 
 /* --------------------------------
 
@@ -592,32 +702,32 @@ Modules - reusable parts of our design
 }
 
 .chip {
-    display: inline-block;
-    height: 32px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(0,0,0,.6);
-    line-height: 32px;
-    padding: 0 12px;
-    border-radius: 16px;
-    background-color: #e4e4e4;
-    margin-bottom: 5px;
-    margin-right: 5px;
+  display: inline-block;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0,0,0,.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #e4e4e4;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 
 .yellow.lighten-2 {
-    background-color: #efd3f9 !important;
+  background-color: #efd3f9 !important;
 }
 
 #gh-latest{
-    font-size: 16px;
-    text-align: center;		
+  font-size: 16px;
+  text-align: center;		
 }
 
 .text-link {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px dotted #000;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dotted #000;
 }
 
 //carbon ads
@@ -697,32 +807,32 @@ Modules - reusable parts of our design
 }
 
 .post-tags a {
+  color: #fff;
   font-size: 14.5px;
+  text-decoration: none;
   padding: 2px 13px;
   border: none;
   background-color: #4CAF50;
   border-radius: 50px;
-  color: #fff;
 }
 
 .pagination a, .pagination span {
   padding: 7px 18px;
   border: 1px solid #eee;
-  margin-left: -2px;
-  margin-right: -2px;
   background-color: #ffffff;
   display: inline-block;
 }
 
 .pagination a {    
   &:hover {
-      background-color: #f1f1f1;
-      color: #333;
+    background-color: #f1f1f1;
+    color: #333;
   }
 }
 
 .pagination {
   text-align: center;
+  margin-top: 18px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 759px) {
@@ -824,7 +934,9 @@ Modules - reusable parts of our design
     left: 50%;
     margin-left: -30px;
     /* Force Hardware Acceleration in WebKit */
+    transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   }
   .cssanimations .cd-timeline-img.is-hidden {
@@ -1140,5 +1252,5 @@ Modules - reusable parts of our design
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
-@import "darcula";
+@import "dracula";
 @import "svg-icons";
