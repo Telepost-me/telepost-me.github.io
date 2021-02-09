@@ -11,5 +11,81 @@ Telepost помогает администраторам каналов сокр
 * [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
+## Отладка
+
+Для запуска и проверки сайта локально необходимо [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll). Ниже инструкция для MacOSX
+
+
+1. Установка XCode
+   ```bash
+   xcode-select --install
+   ```
+
+2. [Установка Jekyll](https://jekyllrb.com/docs/installation/macos/)
+   ```bash
+   gem install jekyll bundler
+   ```
+
+3. Проверяем версию Ruby (обычно уже есть не ниже 2.6) — пригодится:
+   ```bash
+   ruby -v
+
+   # видим примерно такой вывод:
+   # ruby 2.6.3p62 (2019-04-16 revision 67580) [universal.x86_64-darwin19]
+   ```
+   Если нет, то ставим через Homebrew:
+   ```bash
+   brew install ruby
+   ```
+
+4. Смотрим какой у вас shell:
+   ```bash
+   echo $SHELL
+   ```
+   и добавляем Ruby в PATH:
+   ```bash
+   # для ZSH
+   echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+
+   # для Bash
+   echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+   ```
+
+5. Ставим Jekyll локально:
+   ```bash
+   gem install --user-install bundler jekyll
+   ```
+   и добавляем в PATH (вместо `X.X` в `X.X.0` подставляем версию Ruby из п.3):
+   ```bash
+   # смотрим какой у вас shell
+   echo $SHELL
+
+   # для ZSH
+   echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
+
+   # для Bash
+   echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
+   ```
+
+6. Проверяем, что все сделано правильно:
+   ```bash
+   gem env
+   ```
+
+7. Ставим все зависимости:
+   ```bash
+   bundle install
+   
+   # периодически надо выполнять обновление:
+   bundle update
+   ```
+
+8. Запускаем сайт локально:
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+9. Ваш сайт должен быть доступен по адресу: http://127.0.0.1:4000/
+
 ## Автор
 По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
