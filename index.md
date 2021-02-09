@@ -19,11 +19,11 @@ github-issues:
 
 Мини-портал создан в помощь пользователям сервиса [{{ site.telepost.site.name }}]({{ site.telepost.site.url }}). По всем вопросам лучше обращаться в [Телеграм-чат поддержки]({{ site.telepost.support-chat.url }}). У сервиса есть:
 * [Веб-интерфейс]({{ site.telepost.web-app.url }})
-* [Телеграм-бот]({{ site.telepost.bot.url }}) (но лучше использовать [свой персональный бот]({% link _posts/2019-04-26-personal-bot-for-telepost.md %}))
+* [Телеграм-бот]({{ site.telepost.bot.url }}) (но лучше использовать [свой персональный бот](_posts/2019-04-26-personal-bot-for-telepost.md)
 
-## Используй [FAQ]({% link faq/index.html %}), Люк!
+## Используй [FAQ](faq/index.html), Люк!
 
-Прежде всего прочитайте [FAQ]({% link faq/index.html %}) — наверняка там уже есть ответ на ваш вопрос. Для вашего удобства есть [поиск]({% link _pages/search.md %}) по всем страницам и постам на этом сайте. Также весь контент разбит на [категории]({% link _pages/categories.md %}) и, как правило, размечен [тегами]({% link _pages/tags.md %}). 
+Прежде всего прочитайте [FAQ](faq/index.html) — наверняка там уже есть ответ на ваш вопрос. Для вашего удобства есть [поиск](_pages/search.md) по всем страницам и постам на этом сайте. Также весь контент разбит на [категории](_pages/categories.md) и, как правило, размечен [тегами](_pages/tags.md).
 
 Не нашли ответа? Тогда смело заходите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}) и спрашивайте там. 
 
