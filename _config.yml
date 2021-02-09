@@ -81,10 +81,13 @@ baseurl:
 # !! You don't need to change any of the configuration flags below !!
 #
 
+relative_links:
+  enabled: true
+
 permalink: /:categories/:title/
 
 # The release of Jekyll Now that you're using
-version: v1.2.0
+version: v3.9.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
@@ -105,6 +108,7 @@ plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-relative-links
 
 include: ['_pages']
 
@@ -123,4 +127,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - vendor
 
