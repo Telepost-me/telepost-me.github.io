@@ -5,9 +5,9 @@ install:
   - gem install html-proofer
 
 script:
-  - bundler exec github-pages versions
-  - jekyll build
-  - htmlproofer ./_site --disable-external
+  - bundle exec github-pages versions
+  - bundle exec jekyll build
+  - htmlproofer ./_site --disable-external --check-html
 
 # caching bundler gem packages will speed up build
 cache: bundler

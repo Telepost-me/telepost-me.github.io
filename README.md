@@ -1,5 +1,10 @@
 # [Telepost](https://telepost.me/) <img src="https://app.telepost.me/assets/favicons/icon-194x194.png" alt="Telepost logo" align="right" />
-Лучший отложенный постинг для Телеграм!
+[![Build Status](https://travis-ci.com/Telepost-me/telepost-me.github.io.svg?branch=master)](https://travis-ci.com/Telepost-me/telepost-me.github.io)
+[![Security](https://hakiri.io/github/Telepost-me/telepost-me.github.io/master.svg)](https://hakiri.io/github/Telepost-me/telepost-me.github.io/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/fae40em4uff3avkp/branch/master?svg=true)](https://ci.appveyor.com/project/nikolaev-rd/telepost-me-github-io/branch/master)
+
+
+**Лучший отложенный постинг для Телеграм!**
 
 Telepost помогает администраторам каналов сократить рутинную работу и сосредоточиться на производстве качественного контента. Здесь есть отложенные посты, визуальный редактор, совместная работа и многое другое. А главное — это совершенно **бесплатно**!
 
@@ -26,7 +31,7 @@ Telepost помогает администраторам каналов сокр
    gem install jekyll bundler
    ```
 
-3. Проверяем версию Ruby (обычно уже есть не ниже 2.6) — пригодится:
+3. Проверяем версию Ruby (обычно уже есть не ниже 2.6) — пригодится в п.5:
    ```bash
    ruby -v
 
@@ -55,7 +60,7 @@ Telepost помогает администраторам каналов сокр
    ```bash
    gem install --user-install bundler jekyll
    ```
-   и добавляем в PATH (вместо `X.X` в `X.X.0` подставляем версию Ruby из п.3):
+   и добавляем в PATH (вместо `X.X` в `X.X.0` подставляем версию Ruby из п.3, например для версии `2.6.3` вставляем ниже `2.6.0`):
    ```bash
    # смотрим какой у вас shell
    echo $SHELL
