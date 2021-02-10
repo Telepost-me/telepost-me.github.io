@@ -7,7 +7,7 @@ install:
 script:
   - bundler exec github-pages versions
   - jekyll build
-  - htmlproofer ./_site --disable-external
+  - htmlproofer ./_site --disable-external --check-html
 
 # caching bundler gem packages will speed up build
 cache: bundler
