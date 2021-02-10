@@ -31,11 +31,11 @@ github-issues:
 
 ## Я нашел баг!
 
-Сначала проверьте список уже известных багов (см. [список ниже](#{{ page.github-issues.bugs.title | url_encode }}) или [на Github](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3A{% for label in page.github-issues.bugs.lables %}+label%3A{{ label }}{% endfor %})). Не нашли ничего похожего? Тогда смело [добавляйте найденный баг](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.bugs.lables | join: "," }}&template={{ page.github-issues.bugs.template }}) самостоятельно, либо напишите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}).
+Сначала проверьте список уже известных багов (см. [список ниже](#{{ page.github-issues.bugs.title | url_encode }}){:data-proofer-ignore=''} или [на Github](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3A{% for label in page.github-issues.bugs.lables %}+label%3A{{ label }}{% endfor %})). Не нашли ничего похожего? Тогда смело [добавляйте найденный баг](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.bugs.lables | join: "," }}&template={{ page.github-issues.bugs.template }}) самостоятельно, либо напишите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}).
 
 ## У меня есть идея / предложение
 
-Возможно вас опередили и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3A{% for label in page.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ page.github-issues.idea.title | url_encode }})). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.idea.lables | join: "," }}&template={{ page.github-issues.idea.template }}).
+Возможно вас опередили и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3A{% for label in page.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ page.github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.idea.lables | join: "," }}&template={{ page.github-issues.idea.template }}).
 
 ---
 
