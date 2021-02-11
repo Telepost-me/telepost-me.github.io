@@ -16,12 +16,13 @@ Telepost помогает администраторам каналов сокр
 * [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
-## Отладка
+## Отладка (MacOSX)
 
-Для запуска и проверки сайта локально необходимо [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll). Ниже инструкция для MacOSX
+Для запуска и проверки сайта локально нужно [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll). Ниже инструкция для MacOSX:
 
+### Подготовка
 
-1. Установка XCode
+1. [Установка XCode](https://developer.apple.com/xcode/)
    ```bash
    xcode-select --install
    ```
@@ -85,12 +86,31 @@ Telepost помогает администраторам каналов сокр
    bundle update
    ```
 
-8. Запускаем сайт локально:
-   ```bash
-   bundle exec jekyll serve
-   ```
+### Запуск
 
-9. Ваш сайт должен быть доступен по адресу: http://127.0.0.1:4000/
+* Запускаем сайт локально:
+  ```bash
+  bundle exec jekyll serve
+  ```
+
+* Ваш сайт должен быть доступен по адресу: http://127.0.0.1:4000/
+
+### Линтер [HTMLProofer](https://github.com/gjtorikian/html-proofer)
+
+* Установка 
+  ```bash
+  # установка линтера
+  gem install --user-install html-proofer
+  ```
+
+* Билд сайта и запуск линтера :
+  ```bash
+  # билд html-версии сайта
+  bundle exec jekyll build
+  
+  # запуск линтера с проверкой синтаксиса HTML, но без   проверки ссылок на внешние ресурсы
+  htmlproofer ./_site --check-html --disable-external
+  ```
 
 ## Автор
 По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
