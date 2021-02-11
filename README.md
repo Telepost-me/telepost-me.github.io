@@ -18,8 +18,7 @@ Telepost помогает администраторам каналов сокр
 
 ## Отладка (MacOSX)
 
-Для запуска и проверки сайта локально необходимо [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll). Ниже инструкция для MacOSX
-
+Для запуска и проверки сайта локально нужно [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll). Ниже инструкция для MacOSX:
 
 1. Установка XCode
    ```bash
