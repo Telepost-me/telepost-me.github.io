@@ -110,4 +110,4 @@ Telepost помогает администраторам каналов сокр
   ```
 
 ## Автор
-По всем вопросам: @Nikolaev-RD
+По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
