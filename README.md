@@ -96,7 +96,7 @@ Telepost помогает администраторам каналов сокр
 
 * Установка 
   ```bash
-  # установка линтера
+  # локальная установка линтера
   gem install --user-install html-proofer
   ```
 
@@ -110,4 +110,4 @@ Telepost помогает администраторам каналов сокр
   ```
 
 ## Автор
-По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
+По всем вопросам: @Nikolaev-RD
