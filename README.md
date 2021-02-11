@@ -9,7 +9,7 @@
 Telepost помогает администраторам каналов сократить рутинную работу и сосредоточиться на производстве качественного контента. Здесь есть отложенные посты, визуальный редактор, совместная работа и многое другое. А главное — это совершенно **бесплатно**!
 
 ## FAQ
-Прежде, чем задавать вопрос, [прочти это](https://telepost-me.github.io/faq)!
+Прежде, чем задавать вопрос — [прочти FAQ](https://telepost-me.github.io/faq)!
 
 ## Поддержка
 * [Телеграм-чат](https://t.me/joinchat/KL_EBhbpHVuFmf_LDAHmTQ)
@@ -32,14 +32,14 @@ Telepost помогает администраторам каналов сокр
    gem install jekyll bundler
    ```
 
-3. Проверяем версию Ruby (обычно уже есть не ниже 2.6) — пригодится в п.5:
+3. Проверяем версию [Ruby](https://www.ruby-lang.org/) (обычно уже есть не ниже 2.6) — пригодится в п.5:
    ```bash
    ruby -v
 
    # видим примерно такой вывод:
    # ruby 2.6.3p62 (2019-04-16 revision 67580) [universal.x86_64-darwin19]
    ```
-   Если нет, то ставим через Homebrew:
+   Если нет, то ставим через [Homebrew](https://brew.sh):
    ```bash
    brew install ruby
    ```
@@ -48,7 +48,7 @@ Telepost помогает администраторам каналов сокр
    ```bash
    echo $SHELL
    ```
-   и добавляем Ruby в PATH:
+   и добавляем Ruby в `PATH`:
    ```bash
    # для ZSH
    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
@@ -57,15 +57,12 @@ Telepost помогает администраторам каналов сокр
    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
    ```
 
-5. Ставим Jekyll локально:
+5. Ставим [Bundler](https://bundler.io) и [Jekyll](https://jekyllrb.com) локально:
    ```bash
    gem install --user-install bundler jekyll
    ```
-   и добавляем в PATH (вместо `X.X` в `X.X.0` подставляем версию Ruby из п.3, например для версии `2.6.3` вставляем ниже `2.6.0`):
+   и добавляем в `PATH` (вместо `X.X` в `X.X.0` подставляем версию Ruby из п.3, например для версии `2.6.3` вставляем ниже `2.6.0`):
    ```bash
-   # смотрим какой у вас shell
-   echo $SHELL
-
    # для ZSH
    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
 
@@ -75,10 +72,10 @@ Telepost помогает администраторам каналов сокр
 
 6. Проверяем, что все сделано правильно:
    ```bash
-   gem env
+   gem env  # будет длинный вывод RubyGems Environment
    ```
 
-7. Ставим все зависимости:
+7. Ставим все зависимости из [Gemfile](Gemfile):
    ```bash
    bundle install
    
