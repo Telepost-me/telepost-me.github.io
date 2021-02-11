@@ -1,5 +1,14 @@
 version: '{build}'
+
 skip_tags: true
+
+skip_commits:
+  files:
+    - .github/*
+    - .travis.yml
+    - README.md
+    - LICENSE
+
 platform: Any CPU
 
 build_script:
