@@ -16,7 +16,7 @@ Telepost помогает администраторам каналов сокр
 * [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
-## Отладка
+## Отладка (MacOSX)
 
 Для запуска и проверки сайта локально необходимо [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll). Ниже инструкция для MacOSX
 
