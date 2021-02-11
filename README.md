@@ -92,5 +92,17 @@ Telepost помогает администраторам каналов сокр
 
 9. Ваш сайт должен быть доступен по адресу: http://127.0.0.1:4000/
 
+10. Установка и запуск линтера [HTMLProofer](https://github.com/gjtorikian/html-proofer):
+   ```bash
+   # установка линтера
+   gem install --user-install html-proofer
+
+   # билд html-версии сайта
+   bundle exec jekyll build
+
+   # запуск линтера с проверкой синтаксиса HTML, но без проверки ссылок на внешние ресурсы
+   htmlproofer ./_site --check-html --disable-external
+   ```
+
 ## Автор
 По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
