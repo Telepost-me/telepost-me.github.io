@@ -23,10 +23,10 @@ github-issues:
 telepost:
   site:
     name: Telepost.me
-    url: https://telepost.me/
+    url: https://telepost.me
   web-app:
     name: app.telepost.me
-    url: https://app.telepost.me/
+    url: https://app.telepost.me
   bot:
     name: "@TelepostBot"
     url: https://t.me/TelepostBot
