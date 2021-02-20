@@ -19,7 +19,7 @@ github-issues:
 
 Мини-портал создан в помощь пользователям сервиса [{{ site.telepost.site.name }}]({{ site.telepost.site.url }}). По всем вопросам лучше обращаться в [Телеграм-чат поддержки]({{ site.telepost.support-chat.url }}). У сервиса есть:
 * [Веб-интерфейс]({{ site.telepost.web-app.url }})
-* [Телеграм-бот]({{ site.telepost.bot.url }}) (но лучше использовать [свой персональный бот](_posts/2019-04-26-personal-bot-for-telepost.md)
+* [Телеграм-бот]({{ site.telepost.bot.url }}) (но лучше использовать [свой персональный бот](_posts/2019-04-26-personal-bot-for-telepost.md))
 
 ## Используй [FAQ](faq/index.html), Люк!
 
