@@ -486,15 +486,12 @@ body:after {
 
 #archives {
 
+  .category-head {
+    margin-bottom: 4px;
+  }
+
   .archive-item {
     margin-left: 20px;
-
-    h3 {
-      line-height: 1.5;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
-
   }
 
 }
