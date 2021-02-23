@@ -1249,3 +1249,10 @@ Modules - reusable parts of our design
 //@import "highlights";
 @import "dracula";
 @import "svg-icons";
+
+
+.highlighter-rouge {
+  background-color: #F5F5F5;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
