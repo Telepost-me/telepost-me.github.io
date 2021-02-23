@@ -552,6 +552,10 @@ body:after {
     margin-bottom: 10px;
   }
 
+  .issue-wrap {
+    margin-bottom: 20px;
+  }
+
   .issue {
 
     .issue-title {
@@ -572,29 +576,23 @@ body:after {
 
   }
 
-}
+  .bug {
 
-.github-issues .issue-wrap {
-  margin-bottom: 20px;
-}
+    .issue-title::before {
+      content: "🐞 ";
+    }
 
-.github-issues .bug {
+  }
 
-  .issue-title::before {
-    content: "🐞 ";
+  .idea {
+
+    .issue-title::before {
+      content: "💡 ";
+    }
+
   }
 
 }
-
-.github-issues .idea {
-
-  .issue-title::before {
-    content: "💡 ";
-  }
-
-}
-
-
 
 /* --------------------------------
 
