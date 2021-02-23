@@ -1256,3 +1256,18 @@ Modules - reusable parts of our design
   padding: 4px 6px;
   border-radius: 4px;
 }
+
+kbd {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 85%;
+  margin: 0px 2px;
+  padding: 4px 8px ;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.highlighter-rouge {
+  background-color: #F5F5F5;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
