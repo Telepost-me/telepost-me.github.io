@@ -552,6 +552,10 @@ body:after {
     margin-bottom: 10px;
   }
 
+  .issue-wrap {
+    margin-bottom: 20px;
+  }
+
   .issue {
 
     .issue-title {
@@ -572,29 +576,23 @@ body:after {
 
   }
 
-}
+  .bug {
 
-.github-issues .issue-wrap {
-  margin-bottom: 20px;
-}
+    .issue-title::before {
+      content: "🐞 ";
+    }
 
-.github-issues .bug {
+  }
 
-  .issue-title::before {
-    content: "🐞 ";
+  .idea {
+
+    .issue-title::before {
+      content: "💡 ";
+    }
+
   }
 
 }
-
-.github-issues .idea {
-
-  .issue-title::before {
-    content: "💡 ";
-  }
-
-}
-
-
 
 /* --------------------------------
 
@@ -1251,3 +1249,20 @@ Modules - reusable parts of our design
 //@import "highlights";
 @import "dracula";
 @import "svg-icons";
+
+
+.highlighter-rouge {
+  background-color: #F5F5F5;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+kbd {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 85%;
+  margin: 0px 2px;
+  padding: 4px 8px ;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}

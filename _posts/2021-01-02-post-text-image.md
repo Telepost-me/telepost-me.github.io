@@ -10,7 +10,7 @@ category: FAQ
 
 ![image](https://user-images.githubusercontent.com/24430718/105411650-b50d2080-5c44-11eb-91ba-056c59621c2f.png)
 
-Нажимаем на кнопку "Прикрепить фото":
+Нажимаем на кнопку <kbd>Прикрепить фото</kbd>:
 
 ![image](https://user-images.githubusercontent.com/24430718/105411774-e0900b00-5c44-11eb-8eb2-eeaf7600cbc2.png)
 

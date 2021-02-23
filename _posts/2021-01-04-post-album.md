@@ -10,7 +10,7 @@ category: FAQ
 
 ![image](https://user-images.githubusercontent.com/24430718/107145012-e3cb0c80-694f-11eb-8d73-db5f1c37a1f2.png)
 
-Нажимаем кнопку "Выбрать файл" и загружаем фотки/видео (от 2 до 10 шт.):
+Нажимаем кнопку <kbd>Выбрать файл</kbd> и загружаем фотки/видео (от 2 до 10 шт.):
 
 ![image](https://user-images.githubusercontent.com/24430718/107145027-01987180-6950-11eb-84b9-194a76ac3283.png)
 
