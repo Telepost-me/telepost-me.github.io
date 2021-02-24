@@ -245,6 +245,14 @@ p > img {
   margin: 0 auto;
 }
 
+blockquote {
+  font-size: 90%;
+  border-left: 3px solid $gray;
+  padding: 2px 20px;
+  background-color: #99999922;
+}
+
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -415,18 +423,6 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
-}
-
-.post,
-.page {
-
-  blockquote {
-    font-size: 90%;
-    border-left: 3px solid $gray;
-    padding: 12px 20px;
-    background-color: #99999922;
-  }
-
 }
 
 .wrapper-container {
