@@ -590,6 +590,28 @@ body:after {
 
 }
 
+
+#search-results {
+  text-align: left;
+  list-style: none;
+
+  li {
+    margin-bottom: 14px;
+
+    .title {
+      font-weight: bold;
+    }
+
+    .date {
+      display: block;
+      font-size: 80%;
+      line-height: normal;
+    }
+
+  }
+
+}
+
 /* --------------------------------
 
 Modules - reusable parts of our design
