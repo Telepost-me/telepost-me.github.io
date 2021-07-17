@@ -116,7 +116,7 @@ include: ['_pages']
 paginate: 3
 paginate_path: /faq/all/page:num/
 
-pagination-text:
+pagination_text:
   prev: "&laquo; Назад"
   next: "Вперед &raquo;"
   open: "Открыть пост"
