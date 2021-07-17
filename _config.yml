@@ -116,10 +116,16 @@ include: ['_pages']
 paginate: 3
 paginate_path: /faq/all/page:num/
 
-pagination-text:
+pagination_text:
   prev: "&laquo; Назад"
   next: "Вперед &raquo;"
   open: "Открыть пост"
+
+improve_link:
+  enable: true
+  hide_on_mobiles: true
+  text:
+  hover-text: "Редактировать страницу"
 
 # Exclude these files from your production _site
 exclude:

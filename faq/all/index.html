@@ -4,6 +4,8 @@ title: "FAQ: все посты"
 category: FAQ
 ---
 
+  {% include improve.html %}
+
   <h1 class="title">{{ page.title }} (<a class="posts-index" href="{% link faq/index.html %}">оглавление</a>)</h1>
   
   <div class="posts">
@@ -19,7 +21,7 @@ category: FAQ
           {{ post.content }}
         </div>
   
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ site.pagination-text.open }}</a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ site.pagination_text.open }}</a>
       </article>
     {% endfor %}
   
@@ -27,9 +29,9 @@ category: FAQ
     {% if paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ site.pagination-text.prev }}</a>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ site.pagination_text.prev }}</a>
       {% else %}
-        <span>{{ site.pagination-text.prev }}</span>
+        <span>{{ site.pagination_text.prev }}</span>
       {% endif %}
   
       {% for page in (1..paginator.total_pages) %}
@@ -43,9 +45,9 @@ category: FAQ
       {% endfor %}
   
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ site.pagination-text.next }}</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ site.pagination_text.next }}</a>
       {% else %}
-        <span>{{ site.pagination-text.next }}</span>
+        <span>{{ site.pagination_text.next }}</span>
       {% endif %}
     </div>
     {% endif %}
