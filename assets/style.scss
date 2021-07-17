@@ -536,6 +536,21 @@ body:after {
   font-weight: bold;
 }
 
+.improve {
+  float: right;
+  font-size: 22px;
+  margin-top: 2px;
+  
+  a {
+    color: #BBB;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $blue;
+  }
+}
+
 
 //
 // Github issues
@@ -1138,6 +1153,11 @@ Modules - reusable parts of our design
   }
 }
 
+@media only screen and (max-width: 830px) {
+  .show-on-mobiles { display: inline; }
+  .hide-on-mobiles { display: none; }
+}
+
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
   .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
@@ -1267,6 +1287,7 @@ Modules - reusable parts of our design
 //@import "highlights";
 @import "dracula";
 @import "svg-icons";
+@import "font-awesome";
 
 
 .highlighter-rouge {
