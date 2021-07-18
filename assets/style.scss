@@ -242,7 +242,8 @@ img {
 p > img {
   text-align: center;
   display: block;
-  margin: 0 auto;
+  margin: 16px auto;
+  box-shadow: 0px 0px 16px #999;
 }
 
 blockquote {
