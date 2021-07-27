@@ -442,9 +442,14 @@ nav {
   height: 80px;
   background-color: $lightGray;
 
+  .counter {
+    text-align: center;
+  }
+
   .credits {
     font-size: 10px;
     text-align: center;
+    padding-bottom: 6px;
   }
 
 }
