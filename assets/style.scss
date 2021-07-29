@@ -239,10 +239,13 @@ img {
   max-width: 100%;
 }
 
-p > img {
+p > img, p > a > img {
   text-align: center;
   display: block;
   margin: 16px auto;
+}
+
+p > img {
   box-shadow: 0px 0px 16px #999;
 }
 
