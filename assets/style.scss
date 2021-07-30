@@ -583,9 +583,14 @@ body:after {
       font-weight: bold;
     }
 
-    .issue-created {
+    .issue-meta {
       color: #bbb;
       font-size: 12px;
+
+      .issue-created,
+      .issue-comments-count {
+        display: inline-block;
+      }
     }
 
     .issue-text {

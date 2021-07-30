@@ -18,7 +18,13 @@ function githubIssues(username, repo, state, labels, title, descLimit) {
 
           $("div#issue-" + issue.number)
             .append(`<div class="issue-title">#${issue.number} — <a href="${issue.html_url}">${issue.title}</a></div>`)
-            .append(`<div class="issue-created">Добавлено: ${new Date(issue.created_at).toLocaleDateString()} ${new Date(issue.created_at).toLocaleTimeString()}</div>`);
+            .append([
+              `<div class="issue-meta">`,
+              `  <div class="issue-created">Добавлено: ${new Date(issue.created_at).toLocaleDateString()} ${new Date(issue.created_at).toLocaleTimeString()}</div>`,
+              ` &nbsp;|&nbsp; `,
+              `  <div class="issue-comments-count">Комментариев: ${issue.comments}</div>`,
+              `</div>`
+            ].join(''));
 
           if (descLimit > 0 && descLimit !== undefined) {
             $("div#issue-" + issue.number)
