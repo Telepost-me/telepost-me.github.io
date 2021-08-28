@@ -6,13 +6,13 @@ github-issues:
     state: open
     lables:
       - bug
-    template: bug_report.md
+    template: bug.yml
   idea:
     title: Идеи и предложения
     state: open
     lables:
       - idea
-    template: idea.md
+    template: idea.yml
 ---
 
 > Telepost помогает администраторам каналов сократить рутинную работу и сосредоточиться на производстве качественного контента. Здесь есть отложенные посты, визуальный редактор, совместная работа и многое другое. А главное, совершенно **бесплатно**!
