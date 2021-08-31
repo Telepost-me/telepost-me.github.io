@@ -110,5 +110,12 @@ Telepost помогает администраторам каналов сокр
   htmlproofer ./_site --check-html --disable-external
   ```
 
+### Скрипт: линтер + запуск
+
+Для локальной установки линтера и запуска сайта можно использовать скрипт:
+```bash
+./run.sh
+```
+
 ## Автор
 По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
