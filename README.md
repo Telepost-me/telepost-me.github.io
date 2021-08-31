@@ -3,6 +3,7 @@
 [![Security](https://hakiri.io/github/Telepost-me/telepost-me.github.io/master.svg)](https://hakiri.io/github/Telepost-me/telepost-me.github.io/master)
 [![Build status](https://ci.appveyor.com/api/projects/status/fae40em4uff3avkp/branch/master?svg=true)](https://ci.appveyor.com/project/nikolaev-rd/telepost-me-github-io/branch/master)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTelepost-me%2Ftelepost-me.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=telegram.svg&icon_color=%23F5F5F5&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Telepost Support — чат](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/KL_EBhbpHVuFmf_LDAHmTQ)
 
 
 **Лучший отложенный постинг для Телеграм!**
@@ -109,6 +110,13 @@ Telepost помогает администраторам каналов сокр
   # запуск линтера с проверкой синтаксиса HTML, но без проверки ссылок на внешние ресурсы
   htmlproofer ./_site --check-html --disable-external
   ```
+
+### Скрипт: линтер + запуск
+
+Для локальной установки линтера и запуска сайта можно использовать скрипт:
+```bash
+./run.sh
+```
 
 ## Автор
 По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
