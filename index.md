@@ -17,6 +17,8 @@ github-issues:
 
 > Telepost помогает администраторам каналов сократить рутинную работу и сосредоточиться на производстве качественного контента. Здесь есть отложенные посты, визуальный редактор, совместная работа и многое другое. А главное, совершенно **бесплатно**!
 
+<iframe class="status-page" src="https://telepost.instatus.com/embed-status/light-sm" width="230" height="41" frameBorder="0" scrolling="no" style="border: none;"></iframe>
+
 Мини-портал создан в помощь пользователям сервиса [{{ site.telepost.site.name }}]({{ site.telepost.site.url }}). По всем вопросам лучше обращаться в [Телеграм-чат поддержки]({{ site.telepost.support-chat.url }}). У сервиса есть:
 * [Веб-интерфейс]({{ site.telepost.web-app.url }})
 * [Телеграм-бот]({{ site.telepost.bot.url }}) (но лучше использовать [свой персональный бот](_posts/2019-04-26-personal-bot-for-telepost.md))
