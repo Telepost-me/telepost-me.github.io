@@ -1,5 +1,6 @@
 ---
 layout: default
+lang: ru
 github-issues:
   bugs:
     title: Известные баги
@@ -23,11 +24,11 @@ github-issues:
 * [Веб-интерфейс]({{ site.telepost.web-app.url }})
 * [Телеграм-бот]({{ site.telepost.bot.url }}) (но лучше использовать [свой персональный бот](_posts/2019-04-26-personal-bot-for-telepost.md))
 
-## Используй [FAQ](faq/index.html), Люк!
+## Используй [FAQ](_pages/faq.md), Люк!
 
-Прежде всего прочитайте [FAQ](faq/index.html) — наверняка там уже есть ответ на ваш вопрос. Для вашего удобства есть [поиск](_pages/search.md) по всем страницам и постам на этом сайте. Также весь контент разбит на [категории](_pages/categories.md) и, как правило, размечен [тегами](_pages/tags.md).
+Прежде всего прочитайте [FAQ](_pages/faq.md) — наверняка там уже есть ответ на ваш вопрос. Для вашего удобства есть [поиск](_pages/search.md) по всем страницам и постам на этом сайте. Также весь контент разбит на [категории](_pages/categories.md) и, как правило, размечен [тегами](_pages/tags.md).
 
-Не нашли ответа? Тогда смело заходите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}) и спрашивайте там. 
+Не нашли ответа? Тогда смело заходите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}) и спрашивайте там.
 
 Хотите добавить инструкцию? Можно также написать об этом в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}), или самостоятельно добавить пост через Pull Request в [этот репозиторий](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.username }}.github.io).
 
@@ -43,7 +44,6 @@ github-issues:
 
 {% if site.github-issues %}
 <script src="{{ site.baseurl }}/assets/jquery-3.5.1.min.js" type="text/javascript"></script>
-<script src="{{ site.baseurl }}/assets/showdown-1.9.1.min.js" type="text/javascript"></script>
 <script src="{{ site.baseurl }}/assets/github-issues.js" type="text/javascript"></script>
 
 <div class="github-issues"></div>

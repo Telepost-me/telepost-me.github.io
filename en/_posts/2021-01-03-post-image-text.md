@@ -1,0 +1,21 @@
+---
+layout: post
+title: How to make a post with a picture and text (text under the picture)?
+excerpt: In fact, everything is simple - just use the post with type "Photo"
+lang: en
+tags: [Instruction, Post, Photo]
+category: FAQ
+---
+
+1. When creating post, select the post type "Photo":
+   ![image](https://user-images.githubusercontent.com/24430718/105613117-94be9c80-5dd1-11eb-89ee-dcdacbd95d1c.png)
+
+2. Press the button <kbd>Select file</kbd> and upload the picture:
+   ![image](https://user-images.githubusercontent.com/24430718/105613135-b28c0180-5dd1-11eb-85a0-d944a5444092.png)
+
+3. After uploading the picture, you can add text (maximum 1024 characters):
+   ![image](https://user-images.githubusercontent.com/24430718/105613150-e0714600-5dd1-11eb-82d0-66d50b073f8b.png)
+
+After that, the post will consist of a picture, under which there will be text. Example:
+
+![image](https://user-images.githubusercontent.com/24430718/105613165-026ac880-5dd2-11eb-97f1-7feff0fc0d27.png)

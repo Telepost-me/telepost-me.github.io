@@ -1,3 +1,3 @@
 {% if site.improve_link.enable %}
-<div class="improve {% if site.improve_link.hide_on_mobiles %}hide-on-mobiles{% endif %}"><a href="https://github.com/{{ site.footer-links.github }}/{{ site.footer-links.github | downcase }}.github.io/edit/master/{{ page.path }}" title="{{ site.improve_link.hover-text }}"><i class="font-awesome font-awesome-pencil"></i>&nbsp; {{ site.improve_link.text }}</a></div>
+<div class="improve {% if site.improve_link.hide_on_mobiles %}hide-on-mobiles{% endif %}"><a href="https://github.com/{{ site.footer-links.github }}/{{ site.footer-links.github | downcase }}.github.io/edit/master/{{ page.path }}" title="{{ site.data.languages.[page.lang].improve_link.hover-text }}"><i class="font-awesome font-awesome-pencil"></i>&nbsp; {{ site.data.languages.[page.lang].improve_link.text }}</a></div>
 {% endif %}

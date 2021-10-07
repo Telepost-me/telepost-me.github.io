@@ -1,3 +1,6 @@
+{%- unless site.data.languages[page.lang].default -%}
+  {%- capture lang_prefix -%}/{{ page.lang }}{%- endcapture -%}
+{%- endunless -%}
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,18 +21,18 @@
       <div class="wrapper-masthead">
         <div class="container">
           <header class="masthead clearfix">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a>
+            <a href="{{ site.baseurl }}{{ lang_prefix }}" class="site-avatar"><img src="{{ site.baseurl }}/images/telepost_icon-194x194.png" alt="{{ site.title }}" /></a>
 
             <div class="site-info">
-              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-              <p class="site-description">{{ site.description }}</p> 
+              <h1 class="site-name"><a href="{{ site.baseurl }}{{ lang_prefix }}">{{ site.title }}</a></h1>
+              <p class="site-description">{{ site.data.languages[page.lang].site.description }}</p>
             </div>
 
             <nav>
-              <a href="{% link faq/index.html %}">FAQ</a>
-              <a href="{% link _pages/categories.md %}">Категории</a>
-              <a href="{% link _pages/tags.md %}">Теги</a>
-              <a href="{% link _pages/search.md %}">🔍</a>
+              <a href="{{ lang_prefix }}/faq/">{{ site.data.languages[page.lang].menu.faq }}</a>
+              <a href="{{ lang_prefix }}/categories/">{{ site.data.languages[page.lang].menu.categories }}</a>
+              <a href="{{ lang_prefix }}/tags/">{{ site.data.languages[page.lang].menu.tags }}</a>
+              <a href="{{ lang_prefix }}/search/">{{ site.data.languages[page.lang].menu.search }}</a>
             </nav>
           </header>
         </div>
@@ -42,16 +45,36 @@
       </div>
 
       <div class="wrapper-footer">
+
         <div class="container">
-          <footer class="footer">
+
+          {%- if page.id -%}
+            {%- assign posts = site.posts | where: "slug", page.slug | sort: 'lang' -%}
+          {% else %}
+            {%- assign posts = site.pages | where: "name", page.name | sort: 'lang' -%}
+          {%- endif -%}
+          {%- if posts.size > 1 -%}
+          <div class="lang-options">
+            <div>{{ site.data.languages[page.lang].different-language }}:</div>
+            <ul>
+            {% for post in posts %}
+              {%- if post.slug == page.slug and post.url != "/404" -%}
+              <li><a href="{{ site.base-url }}{{ post.url }}" class="{{ site.data.languages[post.lang].label }}" title="View in {{ site.data.languages[post.lang].label }}">{{ site.data.languages[post.lang].icon }} {{ site.data.languages[post.lang].label }}</a></li>
+              {%- endif -%}
+            {% endfor %}
+            </ul>
+          </div>
+          {%- endif %}
+
+          <div class="footer-icons">
             {% include svg-icons.html %}
-          </footer>
+          </div>
 
           <div class="counter">
             {% include counter.html %}
           </div>
 
-          <div class="credits">Основано на теме <a href="https://github.com/amitmerchant1990/reverie">Reverie</a></div>
+          <div class="credits">{{ site.data.languages[page.lang].credits }} <a href="https://github.com/amitmerchant1990/reverie">Reverie</a></div>
         </div>
       </div>
     </div>

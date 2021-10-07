@@ -1,0 +1,37 @@
+---
+layout: post
+title: How to publish multiple audio files in one post?
+excerpt: To do this, use the post type "Album".
+lang: en
+tags: [Instruction, Post, Album]
+category: FAQ
+---
+
+When creating, select the post type "Album":
+
+![image](https://user-images.githubusercontent.com/24430718/131265107-995b2686-3f77-48ff-9759-cd6ce8e596b4.png)
+
+Next, select "Music" and press the button <kbd>Select files</kbd>, load audio files (from 2 to 10 items):
+
+![image](https://user-images.githubusercontent.com/24430718/131265139-14381998-8e23-4526-9426-dd51b82f113a.png)
+
+After loading the audio, you can add text (maximum 1024 characters):
+
+![image](https://user-images.githubusercontent.com/24430718/131265209-e130b1f7-81cb-4038-8fc1-b3ac1ffacdcd.png)
+
+After that, all audio files are visible as one post. Example:
+
+![image](https://user-images.githubusercontent.com/24430718/131265246-23fa9c75-cb7b-4ccb-88c9-fe72ade315b1.png)
+
+
+## Limitations
+
+There are a few restrictions that are important for you to be aware of. These limitations are related to the capabilities of the messenger itself, but we hope that Telegram will fix all this:
+
+* You can upload maximum 10 files in one post
+
+* Although there is nothing about this in the [documentation](https://core.telegram.org/bots/api#sendmediagroup), it has been experimentally found out that the total size of all files should not exceed 50 MB. Otherwise, the request exceeds the limit, and when you try to publish a post (in the preview in the bot, everything can work at the same time) the following error occurrs:
+
+  ![image](https://user-images.githubusercontent.com/24430718/131265380-c51aba6e-189d-45b0-bb81-fe33f6faaed5.png)
+
+  You can bypass the limitation only by splitting the post into several, so that each post does not exceed the specified limit.

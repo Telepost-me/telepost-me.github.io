@@ -8,12 +8,6 @@ title: Telepost
 # Name of the author
 author: Roman Nikolaev
 
-# Short bio or description (displayed in the header)
-description: Лучший отложенный постинг для Telegram
-
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://app.telepost.me/assets/favicons/icon-194x194.png
-
 # Github Issues information
 github-issues:
   username: Telepost-me
@@ -108,31 +102,22 @@ sass:
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-seo-tag
-  - jekyll-paginate
   - jekyll-relative-links
 
 include: ['_pages']
 
-paginate: 3
-paginate_path: /faq/all/page:num/
-
-pagination_text:
-  prev: "&laquo; Назад"
-  next: "Вперед &raquo;"
-  open: "Открыть пост"
-
 improve_link:
   enable: true
   hide_on_mobiles: true
-  text:
-  hover-text: "Редактировать страницу"
 
 # Exclude these files from your production _site
 exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - README.md
+  - README*.md
   - CNAME
   - vendor
-
+  - appveyor.yml
+  - "*.sh"
+  - .*
