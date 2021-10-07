@@ -1,0 +1,21 @@
+---
+layout: post
+title: Why files larger than 50 MB are not being downloaded?
+excerpt: In short, this is a limitation in Telegram, not in Telepost
+lang: en
+tags: [Post, Document]
+category: FAQ
+---
+
+This is a Telegram limitation, to be more precise -[Telegram Bots API](https://core.telegram.org/bots/faq#how-do-i-upload-a-large-file):
+
+> **How do I upload a large file?**
+>
+> Bots can currently send files of any type of up to 50 MB in size, so yes, very large files won't work for now. Sorry. This limit may be changed in the future.
+
+How to get around this?
+
+Despite the limitation for bots, the current file upload limit for users is 2 GB.
+
+This means that you, as the channel admin, can directly (not through a bot) upload to the post a file up to 2 GB size.
+Alternatively, you can upload the file to some external services, and in the post you can simply add a link to the uploaded file.

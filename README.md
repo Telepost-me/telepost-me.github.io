@@ -5,6 +5,9 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTelepost-me%2Ftelepost-me.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=telegram.svg&icon_color=%23F5F5F5&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Telepost Support — чат](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/KL_EBhbpHVuFmf_LDAHmTQ)
 
+<p align="center">
+   <a href="README.md">🇷🇺 Русский</a> | <a href="README.en.md">🇺🇸 English</a>
+</p>
 
 **Лучший отложенный постинг для Телеграм!**
 
@@ -74,7 +77,8 @@ Telepost помогает администраторам каналов сокр
 
 6. Проверяем, что все сделано правильно:
    ```bash
-   gem env  # будет длинный вывод RubyGems Environment
+   gem env
+   # будет длинный вывод RubyGems Environment
    ```
 
 7. Ставим все зависимости из [Gemfile](Gemfile):
@@ -96,13 +100,13 @@ Telepost помогает администраторам каналов сокр
 
 ### Линтер [HTMLProofer](https://github.com/gjtorikian/html-proofer)
 
-* Установка 
+* Установка
   ```bash
   # локальная установка линтера
   gem install --user-install html-proofer
   ```
 
-* Билд сайта и запуск линтера :
+* Билд сайта и запуск линтера:
   ```bash
   # билд html-версии сайта
   bundle exec jekyll build

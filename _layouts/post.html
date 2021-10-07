@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{%- unless site.data.languages[page.lang].default -%}
+  {%- capture lang_prefix -%}/{{ page.lang }}{%- endcapture -%}
+{%- endunless -%}
 
 <article class="post detailed">
   {% include improve.html %}
@@ -11,25 +14,24 @@ layout: default
     <p class="author_title">
       {{ page.date | date: "%Y.%m.%d" }} · 
       <span class="post-categories">
-        {% if post %}
-          {% assign categories = post.categories %}
-        {% else %}
-          {% assign categories = page.categories %}
-        {% endif %}
-        {% for category in categories %}
-          <a href="{{ site.baseurl }}/categories/#{{ category | slugize }}">{{ category }}</a>
+        {%- assign langs = site.posts | map: "lang" | uniq -%}
+        {%- assign categories = page.categories -%}
+        {%- for category in categories -%}
+        {%- unless langs contains category -%}
+          <a href="{{ site.baseurl }}{{ lang_prefix }}/categories/#{{ category | slugize }}">{{ category }}</a>
           {% unless forloop.last %} | {% endunless %}
-        {% endfor %}
+        {%- endunless -%}
+        {%- endfor -%}
       </span>
     </p>
     <div class="post-tags">
-      {% if post %}
+      {%- if post -%}
         {% assign tags = post.tags %}
-      {% else %}
+      {%- else -%}
         {% assign tags = page.tags %}
-      {% endif %}
+      {%- endif -%}
       {% for tag in tags %}
-        <a href="{{ site.baseurl }}/tags/#{{ tag | slugize }}">{{ tag }}</a>
+        <a href="{{ site.baseurl }}{{ lang_prefix }}/tags/#{{ tag | slugize }}">{{ tag }}</a>
         {% unless forloop.last %}&nbsp;{% endunless %}
       {% endfor %}
     </div>
@@ -40,7 +42,7 @@ layout: default
 
     {% if page.source.name or page.source.url %}
     <div class="source">
-      Источник: {% if page.source.url %}<a href="{{ page.source.url }}">{% if page.source.name %}{{ page.source.name }}{% else %}{{ page.source.url }}{% endif %}</a>{% else %}{{ page.source.name }}{% endif %}
+      {{ site.data.languages[page.lang].source-link }}: {% if page.source.url %}<a href="{{ page.source.url }}">{% if page.source.name %}{{ page.source.name }}{% else %}{{ page.source.url }}{% endif %}</a>{% else %}{{ page.source.name }}{% endif %}
     </div>
     {% endif %}
   </div>
