@@ -3,7 +3,7 @@
 [![Security](https://hakiri.io/github/Telepost-me/telepost-me.github.io/master.svg)](https://hakiri.io/github/Telepost-me/telepost-me.github.io/master)
 [![Build status](https://ci.appveyor.com/api/projects/status/fae40em4uff3avkp/branch/master?svg=true)](https://ci.appveyor.com/project/nikolaev-rd/telepost-me-github-io/branch/master)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTelepost-me%2Ftelepost-me.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=telegram.svg&icon_color=%23F5F5F5&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-[![Telepost Support — чат](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/KL_EBhbpHVuFmf_LDAHmTQ)
+[![Telepost Support — чат](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
 
 <p align="center">
    <a href="README.md">🇷🇺 Русский</a> | <a href="README.en.md">🇺🇸 English</a>
@@ -17,7 +17,7 @@ Telepost помогает администраторам каналов сокр
 Прежде, чем задавать вопрос — [прочти FAQ](https://telepost-me.github.io/faq)!
 
 ## Поддержка
-* [Телеграм-чат](https://t.me/joinchat/KL_EBhbpHVuFmf_LDAHmTQ)
+* [Телеграм-чат](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
 * [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
