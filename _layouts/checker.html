@@ -7,7 +7,7 @@ layout: page
 <ul id="checker">
 {% for item in site.data.checker.sites %}
     <li>
-        <img src="{{ item.src }}?{{ site.time | date: '%s' }}" onload="this.style.borderColor='{{ site.data.checker.colors.onload }}'" onerror="this.style.borderColor='{{ site.data.checker.colors.onerror }}'" />
+        <img src="{{ item.src }}?{{ site.time | date: '%s' }}" alt="{{ item.url }}" onload="this.style.borderColor='{{ site.data.checker.colors.onload }}'" onerror="this.style.borderColor='{{ site.data.checker.colors.onerror }}'" />
         {{ item.url }}
     </li>
 {% endfor %}
