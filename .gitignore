@@ -10,4 +10,5 @@ package.json
 *.gem
 *.gemspec
 .jekyll-cache
+.vendor/
 vendor/
