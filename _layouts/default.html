@@ -1,6 +1,8 @@
-{%- unless site.data.languages[page.lang].default -%}
-  {%- capture lang_prefix -%}/{{ page.lang }}{%- endcapture -%}
-{%- endunless -%}
+{%- if site.data.languages[page.lang].default -%}
+  {%- capture site_baseurl -%}{{ site.baseurl }}{%- endcapture -%}
+{%- else -%}
+  {%- capture site_baseurl -%}{{ site.baseurl }}/{{ page.lang }}{%- endcapture -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,18 +23,18 @@
       <div class="wrapper-masthead">
         <div class="container">
           <header class="masthead clearfix">
-            <a href="{{ site.baseurl }}{{ lang_prefix }}" class="site-avatar"><img src="{{ site.baseurl }}/images/telepost_icon-194x194.png" alt="{{ site.title }}" /></a>
+            <a href="{{ site_baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}/images/telepost_icon-194x194.png" alt="{{ site.title }}" /></a>
 
             <div class="site-info">
-              <h1 class="site-name"><a href="{{ site.baseurl }}{{ lang_prefix }}">{{ site.title }}</a></h1>
+              <h1 class="site-name"><a href="{{ site_baseurl }}/">{{ site.title }}</a></h1>
               <p class="site-description">{{ site.data.languages[page.lang].site.description }}</p>
             </div>
 
             <nav>
-              <a href="{{ lang_prefix }}/faq/">{{ site.data.languages[page.lang].menu.faq }}</a>
-              <a href="{{ lang_prefix }}/categories/">{{ site.data.languages[page.lang].menu.categories }}</a>
-              <a href="{{ lang_prefix }}/tags/">{{ site.data.languages[page.lang].menu.tags }}</a>
-              <a href="{{ lang_prefix }}/search/">{{ site.data.languages[page.lang].menu.search }}</a>
+              <a href="{{ site_baseurl }}/faq/">{{ site.data.languages[page.lang].menu.faq }}</a>
+              <a href="{{ site_baseurl }}/categories/">{{ site.data.languages[page.lang].menu.categories }}</a>
+              <a href="{{ site_baseurl }}/tags/">{{ site.data.languages[page.lang].menu.tags }}</a>
+              <a href="{{ site_baseurl }}/search/">{{ site.data.languages[page.lang].menu.search }}</a>
             </nav>
           </header>
         </div>
@@ -59,7 +61,7 @@
             <ul>
             {% for post in posts %}
               {%- if post.slug == page.slug and post.url != "/404" -%}
-              <li><a href="{{ site.base-url }}{{ post.url }}" class="{{ site.data.languages[post.lang].label }}" title="View in {{ site.data.languages[post.lang].label }}">{{ site.data.languages[post.lang].icon }} {{ site.data.languages[post.lang].label }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ post.url }}" class="{{ site.data.languages[post.lang].label }}" title="View in {{ site.data.languages[post.lang].label }}">{{ site.data.languages[post.lang].icon }} {{ site.data.languages[post.lang].label }}</a></li>
               {%- endif -%}
             {% endfor %}
             </ul>
