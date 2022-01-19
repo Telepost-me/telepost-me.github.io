@@ -14,6 +14,7 @@ ru:
     faq: FAQ
     categories: Категории
     tags: Теги
+    check: 🔮
     search: 🔍
   faq:
     all: Все посты
@@ -35,6 +36,7 @@ en:
     faq: FAQ
     categories: Categories
     tags: Tags
+    check: 🔮
     search: 🔍
   faq:
     all: All posts
