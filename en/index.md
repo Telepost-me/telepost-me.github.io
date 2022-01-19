@@ -24,9 +24,20 @@ The mini-portal was created to help users of the service [{{ site.telepost.site.
 * [Web UI]({{ site.telepost.web-app.url }})
 * [Telegram bot]({{ site.telepost.bot.url }}) (but it's better to use [you own bot](_posts/2019-04-26-personal-bot-for-telepost.md))
 
+## Troubleshooting
+
+If you do not see pictures in the Web UI of Telepost, or, conversely, pictures are not loaded into the post through the Web UI - [check on a special page](_pages/check.md) for any blocked important resources.
+
+For other problems while working with the Web UI, first try:
+* clear site cache / open site in incognito mode
+* clear cookies
+* open the site in another browser / mobile
+
+Sometimes errors may occur while writing/editing a post through the Web UI. In this case, try to start writing a post from scratch (recreating a post).
+
 ## Use [FAQ](_pages/faq.md), Luke!
 
-First of all, read the [FAQ](_pages/faq.md) — for sure there is already an answer for your question. For your convenience, there is [search](_pages/search.md) through all pages and posts on this site. Also, all content is organized into [categories](_pages/categories.md) and often is labeled with [tags](_pages/tags.md).
+Did the tips above help you? Don't despair and read the [FAQ](_pages/faq.md) — for sure there is already an answer for your question. For your convenience, there is [search](_pages/search.md) through all pages and posts on this site. Also, all content is organized into [categories](_pages/categories.md) and often is labeled with [tags](_pages/tags.md).
 
 Didn't find the answer? Then feel free to go to [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}) and ask your question there.
 

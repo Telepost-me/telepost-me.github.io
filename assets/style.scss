@@ -641,6 +641,35 @@ body:after {
 }
 
 
+//
+// Checker
+//
+
+#checker {
+
+  li {
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      display: inline;
+      width: 64px;
+      height: 64px;
+      border: 10px solid gray;
+      border-radius: 64px;
+      padding: 6px;
+      background-color: #F0F0F0;
+      box-shadow: none;
+      margin: 4px 16px 4px 0px;
+    }
+
+  }
+
+}
+
+
 #search-results {
   text-align: left;
   list-style: none;
