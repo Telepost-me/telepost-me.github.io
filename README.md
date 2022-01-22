@@ -21,106 +21,39 @@ Telepost помогает администраторам каналов сокр
 * [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
-## Отладка (Mac OS X)
+## Запуск и отладка сайта (Docker)
 
-Для запуска и проверки сайта локально нужно [установить и настроить все необходимое](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll).
+Для запуска и проверки сайта локально потребуется установить только [Docker Desktop](https://docs.docker.com/desktop/).
 
-### Подготовка
+Запускаем:
 
-1. [Установка XCode](https://developer.apple.com/xcode/)
+* через Docker
    ```bash
-   xcode-select --install
+   docker run --rm \
+      --volume="$PWD:/srv/jekyll" \
+      -p 4000:4000 \
+      -p 35729:35729 \
+      jekyll/jekyll jekyll serve --incremental --force_polling
+   ```
+   или просто запустите скрипт [`./run.sh`](run.sh)
+
+* через Docker Compose (используется [docker-compose.yml](docker-compose.yml))
+   ```bash
+   docker-compose up
    ```
 
-2. [Установка Jekyll](https://jekyllrb.com/docs/installation/macos/)
-   ```bash
-   gem install jekyll bundler
-   ```
+Ваш сайт должен быть доступен по адресу: http://127.0.0.1:4000/
 
-3. Проверяем версию [Ruby](https://www.ruby-lang.org/) (обычно уже есть не ниже 2.6) — пригодится в п.5:
-   ```bash
-   ruby -v
+## Линтер [HTMLProofer](https://github.com/gjtorikian/html-proofer)
 
-   # видим примерно такой вывод:
-   # ruby 2.6.3p62 (2019-04-16 revision 67580) [universal.x86_64-darwin19]
-   ```
-   Если нет, то ставим через [Homebrew](https://brew.sh):
-   ```bash
-   brew install ruby
-   ```
+После внесения всех изменений не забудьте прогнать линтер.
 
-4. Смотрим какой у вас shell:
-   ```bash
-   echo $SHELL
-   ```
-   и добавляем Ruby в `PATH`:
-   ```bash
-   # для ZSH
-   echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
-
-   # для Bash
-   echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
-   ```
-
-5. Ставим [Bundler](https://bundler.io) и [Jekyll](https://jekyllrb.com) локально:
-   ```bash
-   gem install --user-install bundler jekyll
-   ```
-   и добавляем в `PATH` (вместо `X.X` в `X.X.0` подставляем версию Ruby из п.3, например для версии `2.6.3` вставляем ниже `2.6.0`):
-   ```bash
-   # для ZSH
-   echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
-
-   # для Bash
-   echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
-   ```
-
-6. Проверяем, что все сделано правильно:
-   ```bash
-   gem env
-   # будет длинный вывод RubyGems Environment
-   ```
-
-7. Ставим все зависимости из [Gemfile](Gemfile):
-   ```bash
-   bundle install
-   
-   # периодически надо выполнять обновление:
-   bundle update
-   ```
-
-### Запуск
-
-* Запускаем сайт локально:
-  ```bash
-  bundle exec jekyll serve
-  ```
-
-* Ваш сайт должен быть доступен по адресу: http://127.0.0.1:4000/
-
-### Линтер [HTMLProofer](https://github.com/gjtorikian/html-proofer)
-
-* Установка
-  ```bash
-  # локальная установка линтера
-  gem install --user-install html-proofer
-  ```
-
-* Билд сайта и запуск линтера:
-  ```bash
-  # билд html-версии сайта
-  bundle exec jekyll build
-  
-  # запуск линтера с проверкой синтаксиса HTML, но без проверки ссылок на внешние ресурсы
-  htmlproofer ./_site --check-html --disable-external
-  ```
-
-### Скрипт: линтер + запуск
-
-Для локальной установки линтера и запуска сайта можно использовать скрипт:
+Билдим сайт из исходников и запускаем через Docker (используется файл [Dockerfile](Dockerfile)):
 ```bash
-./run.sh
+docker build -t jekyll-site .
+docker run --rm -it jekyll-site --check-html --disable-external
 ```
+или просто запустите скрипт [`./run-htmlproofer.sh`](run-htmlproofer.sh).
 
 ## Автор
 По всем вопросам: [@Nikolaev-RD](https://github.com/nikolaev-rd)
