@@ -119,5 +119,6 @@ exclude:
   - CNAME
   - vendor
   - appveyor.yml
+  - docker-compose.yml
   - "*.sh"
   - .*

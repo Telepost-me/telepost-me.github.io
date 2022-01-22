@@ -21,106 +21,39 @@ Before asking a question — [read the FAQ](https://telepost-me.github.io/faq)!
 * [Known bugs](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
 * [Ideas list](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
-## Debugging (Mac OS X)
+## Site launch & debugging (Docker)
 
-To launch and verify site local, your need to [install & configure all required components](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll).
+To launch and verify site local, your only need to install [Docker Desktop](https://docs.docker.com/desktop/).
 
-### Preparation
+Launch:
 
-1. [Install XCode](https://developer.apple.com/xcode/)
+* using Docker
    ```bash
-   xcode-select --install
+   docker run --rm \
+      --volume="$PWD:/srv/jekyll" \
+      -p 4000:4000 \
+      jekyll/jekyll jekyll serve --incremental --force_polling
+   ```
+   or just use script [`./run.sh`](run.sh)
+
+* using Docker Compose (see [docker-compose.yml](docker-compose.yml))
+   ```bash
+   docker-compose up
    ```
 
-2. [Install Jekyll](https://jekyllrb.com/docs/installation/macos/)
-   ```bash
-   gem install jekyll bundler
-   ```
-
-3. Check version of [Ruby](https://www.ruby-lang.org/) (usually already exist v2.6 or higher) — this information will be needed at step #5:
-   ```bash
-   ruby -v
-
-   # your will see something like this:
-   # ruby 2.6.3p62 (2019-04-16 revision 67580) [universal.x86_64-darwin19]
-   ```
-   If not, then your need to install it through [Homebrew](https://brew.sh):
-   ```bash
-   brew install ruby
-   ```
-
-4. Check your current shell:
-   ```bash
-   echo $SHELL
-   ```
-   and add Ruby to `PATH`:
-   ```bash
-   # for ZSH
-   echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
-
-   # for Bash
-   echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
-   ```
-
-5. Install [Bundler](https://bundler.io) & [Jekyll](https://jekyllrb.com) local:
-   ```bash
-   gem install --user-install bundler jekyll
-   ```
-   and add it to `PATH` (replace `X.X` in `X.X.0` with Ruby version from step #3, example for version `2.6.3` add `2.6.0`):
-   ```bash
-   # for ZSH
-   echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
-
-   # for Bash
-   echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
-   ```
-
-6. Check, that all was done right:
-   ```bash
-   gem env
-   # long output RubyGems Environment will be here
-   ```
-
-7. Install all dependences from [Gemfile](Gemfile):
-   ```bash
-   bundle install
-   
-   # your need to update it periodically:
-   bundle update
-   ```
-
-### Launch
-
-* Launching site local:
-  ```bash
-  bundle exec jekyll serve
-  ```
-
-* Your site will work here: http://127.0.0.1:4000/
+Your site will work here: http://127.0.0.1:4000/.
 
 ### Linter [HTMLProofer](https://github.com/gjtorikian/html-proofer)
 
-* Install
-  ```bash
-  # local installation of linter
-  gem install --user-install html-proofer
-  ```
+Don't forget to launch linter to verify your changes.
 
-* Build site & run linter:
-  ```bash
-  # building html-version of site
-  bundle exec jekyll build
-  
-  # run linter with check of HTML syntax, but without checking of external links
-  htmlproofer ./_site --check-html --disable-external
-  ```
+Building site from sources & launch it using Docker (see [Dockerfile](Dockerfile)):
 
-### Script: linter + launch
-
-For local installation of linter & launch the site your can use this script:
 ```bash
-./run.sh
+docker build -t jekyll-site .
+docker run --rm -it jekyll-site --check-html --disable-external
 ```
+or just use script [`./run-htmlproofer.sh`](run-htmlproofer.sh).
 
 ## Author
 * [@Nikolaev-RD](https://github.com/nikolaev-rd)

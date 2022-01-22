@@ -1,18 +1,7 @@
 #!/bin/bash
-set -e
 
-echo
-echo "● Install HTMLProofer..."
-gem install --user-install html-proofer
-
-echo
-echo "● Build jekyll site..."
-bundle exec jekyll build
-
-echo
-echo "● Linting site..."
-htmlproofer ./_site --disable-external --check-html
-
-echo
-echo "● Launch jekyll site..."
-bundle exec jekyll serve
+docker run --rm \
+    --volume="$PWD:/srv/jekyll" \
+    -p 4000:4000 \
+    -p 35729:35729 \
+    jekyll/jekyll jekyll serve --incremental --force_polling
