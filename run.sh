@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Cleanup: remove static site folder and metadata..."
+rm -rf _site .jekyll-metadata
+
+echo "Launch site in Docker container..."
 docker run --rm \
     --volume="$PWD:/srv/jekyll" \
     -p 4000:4000 \
