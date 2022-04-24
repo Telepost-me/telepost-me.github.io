@@ -20,7 +20,7 @@ Send to official bot [@BotFather](https://t.me/BotFather) command `/start`. Afte
 [@BotFather](https://t.me/BotFather) will ask you to choose the name of the bot (any characters are allowed):
 ![image](https://user-images.githubusercontent.com/24430718/106514319-253d6100-64e5-11eb-90a2-bdbee67ffb3e.png)
 
-It's time to choose a link (in other words — username) to this bot. It is required that the link ends with `bot` or `_bot**`. Please note that it will be impossible to change the link (unlike the name)!
+It's time to choose a link (in other words — username) to this bot. It is required that the link ends with `bot` or `_bot`. Please note that it will be impossible to change the link (unlike the name)!
 ![image](https://user-images.githubusercontent.com/24430718/106514485-59188680-64e5-11eb-966d-b98e2aa87a7f.png)
 
 Congratulations, your personal bot has been created! Now you need to connect it to Telepost.

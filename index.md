@@ -37,7 +37,7 @@ github-issues:
 
 ## Используй [FAQ](_pages/faq.md), Люк!
 
-Не помогли советы выше? Не отчавайтесь и прочитайте [FAQ](_pages/faq.md) — наверняка там уже есть ответ на ваш вопрос. Для вашего удобства есть [поиск](_pages/search.md) по всем страницам и постам на этом сайте. Также весь контент разбит на [категории](_pages/categories.md) и, как правило, размечен [тегами](_pages/tags.md).
+Не помогли советы выше? Не отчаивайтесь и прочитайте [FAQ](_pages/faq.md) — наверняка там уже есть ответ на ваш вопрос. Для вашего удобства есть [поиск](_pages/search.md) по всем страницам и постам на этом сайте. Также весь контент разбит на [категории](_pages/categories.md) и, как правило, размечен [тегами](_pages/tags.md).
 
 Не нашли ответа? Тогда смело заходите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}) и спрашивайте там.
 
@@ -49,7 +49,7 @@ github-issues:
 
 ## У меня есть идея / предложение
 
-Возможно вас опередили и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in page.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ page.github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.idea.lables | join: "," }}&template={{ page.github-issues.idea.template }}).
+Возможно вас опередили, и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in page.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ page.github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.idea.lables | join: "," }}&template={{ page.github-issues.idea.template }}).
 
 ---
 
