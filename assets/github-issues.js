@@ -4,7 +4,7 @@ function githubIssues(username, repo, state, labels, title) {
 
   $(document).ready(function() {
     $.getJSON(
-    	`https://api.github.com/repos/${username}/${repo}/issues?state=${state}&labels=${labels.join(',')}`)
+    	`https://api.github.com/repos/${username}/${repo}/issues?per_page=100&state=${state}&labels=${labels.join(',')}`)
       .done(
         function(issues) {
         $(`div.${labels.join('.')}`)
