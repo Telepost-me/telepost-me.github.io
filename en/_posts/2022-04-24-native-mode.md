@@ -1,0 +1,23 @@
+---
+layout: post
+title: Native mode (bot)
+excerpt: Use this mode if you create and format posts through a bot
+lang: en
+tags: [Instruction, Bot]
+category: FAQ
+---
+
+If you get error like this when creating/formatting a post through a bot:
+```
+Character '(' is reserved and must be escaped with the preceding '\'
+```
+so the bot is configured to format posts in [Markdown mode](https://core.telegram.org/bots/api#markdownv2-style).
+
+
+In order to use native text formatting **only in the current post** in the bot, select <kbd>Native</kbd> right after adding the post content:
+
+![image](https://user-images.githubusercontent.com/24430718/164975067-37ce77cc-0db4-414c-a776-6c4eafca9714.png)
+
+In order to **always** use the native formatting of the post text in the bot, like formatting a regular message, you need to switch the bot to Native mode: <kbd>Settings</kbd> → <kbd>Formatting</kbd> → select <kbd>Native</kbd>:
+
+![image](https://user-images.githubusercontent.com/24430718/164975146-8e0db81c-30b7-45a9-a4bf-5d34c309d2b7.png)
