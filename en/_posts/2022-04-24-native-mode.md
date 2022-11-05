@@ -13,6 +13,8 @@ Character '(' is reserved and must be escaped with the preceding '\'
 ```
 so the bot is configured to format posts in [Markdown mode](https://core.telegram.org/bots/api#markdownv2-style).
 
+Also, the bot can be configured to format in [HTML mode](https://core.telegram.org/bots/api#html-style) — attempts to use native formatting will simply not give any result (for example, it is not possible to make text **bold**, or make [link in text]({{ site.telepost.web-app.url }})).
+
 
 In order to use native text formatting **only in the current post** in the bot, select <kbd>Native</kbd> right after adding the post content:
 
