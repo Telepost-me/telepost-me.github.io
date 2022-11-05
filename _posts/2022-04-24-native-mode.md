@@ -13,6 +13,9 @@ Character '(' is reserved and must be escaped with the preceding '\'
 ```
 значит бот настроен на форматирование в режиме [Markdown](https://core.telegram.org/bots/api#markdownv2-style).
 
+Также бот может быть настроен на форматирование в режиме [HTML](https://core.telegram.org/bots/api#html-style), тогда попытки использования нативного форматирования просто не будут давать никакого результата (например, не получается сделать текст **жирным**, или сделать [ссылку в тексте]({{ site.telepost.web-app.url }})).
+
+
 Для того, чтобы использовать нативное форматирование текста **только в текущем посте** в боте, сразу после добавления содержимого поста выберите <kbd>Native</kbd>:
 
 ![image](https://user-images.githubusercontent.com/24430718/164975067-37ce77cc-0db4-414c-a776-6c4eafca9714.png)
