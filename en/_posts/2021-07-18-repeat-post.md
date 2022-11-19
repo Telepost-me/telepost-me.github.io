@@ -24,12 +24,10 @@ To create an auto-publication you need:
 * check the result in the next. step "List of dates":
   ![image](https://user-images.githubusercontent.com/24430718/126080926-1bf5b5cb-dd00-4246-be11-81bb4598fdd0.png)
 
-
 ## Limitations
 
 * No more than 100 repetitions of one post
 * Schedule no more than 3 months in advance
-
 
 ## Examples
 
@@ -54,9 +52,9 @@ To create an auto-publication you need:
   ![image](https://user-images.githubusercontent.com/24430718/126081677-23bdb313-fa79-40bf-886d-856abb08a80e.png)
   ![image](https://user-images.githubusercontent.com/24430718/126082153-41175d22-0ddb-4397-8bf1-a3c1ed2fecb9.png)
 
-
 ## Note
 
 Technically, automatic republishing work by copying your original post at the time of republishing. Several nuances follow from this:
+
 * the posts-repetitions will not be visible in the calendar of posts, only the original post
 * in case of failure at the time of publication post-repetition, this post may not published (there will be a gap in the repeating schedule)

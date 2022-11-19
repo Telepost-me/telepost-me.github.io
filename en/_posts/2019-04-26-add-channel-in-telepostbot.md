@@ -23,6 +23,7 @@ To connect chat (group) — do the same in Group Settings.
 If your have public channel, forward to bot any message from channel. Also in case of public channel/group your can send their username to bot.
 
 In case of private channel or group — your need to send to the bot channel/group ID accordingly. To find ID your can use bots:
+
 * [@super_id_bot](https://t.me/super_id_bot) – in groups use command `/chat_id`
 * [@myidbot](https://t.me/myidbot) – use command `/getid`
 

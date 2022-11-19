@@ -23,7 +23,6 @@ After that, the post will consist of pictures / videos in the form of an album
 
 ![image](https://user-images.githubusercontent.com/24430718/107145046-1ffe6d00-6950-11eb-9f01-db18b3386656.png)
 
-
 ## Limitations
 
 There are several limitations that you need to be aware of. These limitations are related to the capabilities of the messenger itself, but we hope that Telegram will fix all this:

@@ -10,6 +10,7 @@ category: FAQ
 Often posts have something common (the beginning of a post, contacts at the end, etc.), for this case you may want to have a post template - a blank that will be used as a basis for new posts.
 
 There is no built-in template function in Telepost at the moment, but there is a simple solution for how to get what you need. To create a template:
+
 * open <kbd>Drafts</kbd> and make a post template
 * save your draft to <kbd>Drafts</kbd> (this draft should never be published)
 * when creating a real post, go to <kbd>Drafts</kbd> and make a copy of the post draft
