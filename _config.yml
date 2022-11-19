@@ -1,3 +1,4 @@
+---
 #
 # This file contains configuration flags to customize your site
 #
@@ -69,7 +70,7 @@ enforce_ssl: https://telepost-me.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl:
+baseurl: ""
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -79,7 +80,7 @@ relative_links:
   enabled: true
   collections: true
 
-permalink: /:categories/:title/
+permalink: /:categories/:title
 
 # The release of Jekyll Now that you're using
 version: v3.9.0
