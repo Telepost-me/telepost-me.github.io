@@ -80,7 +80,7 @@ relative_links:
   enabled: true
   collections: true
 
-permalink: /:categories/:title
+permalink: /:categories/:title/
 
 # The release of Jekyll Now that you're using
 version: v3.9.0
