@@ -3,7 +3,7 @@ layout: post
 title: Why am I getting a "Check the entered data" error?
 excerpt: The attached file is larger than 5 MB, or the picture is larger than 5000 pixels in width or height.
 lang: en
-tags: [Instruction, Post, Text]
+tags: [Instruction, Post, Text, Error]
 category: FAQ
 ---
 
