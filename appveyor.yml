@@ -1,6 +1,4 @@
----
-
-version: "{build}"
+version: '{build}'
 
 skip_tags: true
 
@@ -14,11 +12,13 @@ skip_commits:
 platform: Any CPU
 
 build_script:
-  - sh: >-
-      bundle install --jobs=3 --retry=3
-      bundle exec jekyll build
+- sh: >-
+    bundle install --jobs=3 --retry=3
+
+    bundle exec jekyll build
 
 on_success:
-  - sh: >-
-      gem install html-proofer
-      htmlproofer ./_site --disable-external --check-html
+- sh: >-
+    gem install html-proofer
+
+    htmlproofer ./_site --disable-external --check-html

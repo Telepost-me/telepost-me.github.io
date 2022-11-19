@@ -1,5 +1,3 @@
----
-
 sites:
   - url: app.telepost.me
     src: https://app.telepost.me/ru/assets/logo1.png
@@ -9,7 +7,7 @@ sites:
 
   - url: t.me
     src: https://t.me/favicon.ico
-
+  
   - url: telegra.ph
     src: https://telegra.ph/favicon.ico
 
