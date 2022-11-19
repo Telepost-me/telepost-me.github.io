@@ -3,15 +3,7 @@
 name: Lint Code Base
 
 # Start the job on all push
-on:
-  push:
-    branches-ignore:
-      - master
-      - main
-  pull_request:
-    branches:
-      - master
-      - main
+on: push
 
 jobs:
   build:
