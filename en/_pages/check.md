@@ -16,6 +16,7 @@ The check above is very simple: the page is trying to load the icon images (favi
 
 🔴 The red border, and the icon image didn't load, is a sure sign that **the site is unavailable**.  
 The reasons may be as follows (from simple to complex):
+
 * some plug-in in the browser is to blame (anonymizers, ad blockers, etc.), or some kind of protection built into the browser — try to disable all this and check again;
 * overdone the antivirus / firewall on your device — turn it off completely for a while and check again;
 * blocking at the level of your Internet provider (different resources can be blocked in different countries) — only a VPN will help here.

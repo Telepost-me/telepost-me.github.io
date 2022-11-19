@@ -17,6 +17,6 @@ Or previews of uploaded images are not loaded:
 
 ![image](https://user-images.githubusercontent.com/24430718/108559943-0e807200-730d-11eb-88f6-3a693dca70aa.png)
 
-**Solution**
+## Solution
 
 Click the button in your plugin, which is usually called <kbd>Trust this site</kbd>, or just disable the blocking plugin for a while.

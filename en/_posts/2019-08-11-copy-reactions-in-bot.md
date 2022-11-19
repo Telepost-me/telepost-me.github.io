@@ -15,6 +15,7 @@ Now you don't have to bother copying reactions!
 A command has been added to the bot extra-keyboard [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}), with which you can easily copy and paste buttons / reactions into your posts.
 
 To use this function:
+
 * Go to [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) and start creating a new post as usual
 * At the end of the post, after the main text, enter a special extra command `::/::` (works as a separator line) and write the necessary buttons / reactions.
 
@@ -26,7 +27,7 @@ In this example, we used only two reactions and three link-buttons (two on one l
 
 Now you can safely forward your posts to another person for publication, and not worry about the buttons or reactions being forgotten.
 
-**Note**
+## Note
 
 * Link-buttons must be separated using the `|` character
 * Reaction buttons must be separated using the `/` character

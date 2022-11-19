@@ -15,6 +15,7 @@ In order for [native Telegram comments](https://telegram.org/blog/filters-anonym
 2. **Remove all reactions / buttons under the post:** native Telegram comments will not appear as long as there are reactions or link-buttons under the post. This is not a Telepost problem, this is how Telegram works 🤷‍♂️
 
 As a workaround, you can do a multi-publication with two posts at once:
+
 * the first post contains the main gist and contains buttons / reactions
 * second post without buttons / reactions (you can add text / picture), due to which there will be native comments under it
 

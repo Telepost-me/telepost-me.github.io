@@ -23,7 +23,6 @@ After that, all audio files are visible as one post. Example:
 
 ![image](https://user-images.githubusercontent.com/24430718/131265246-23fa9c75-cb7b-4ccb-88c9-fe72ade315b1.png)
 
-
 ## Limitations
 
 There are a few restrictions that are important for you to be aware of. These limitations are related to the capabilities of the messenger itself, but we hope that Telegram will fix all this:

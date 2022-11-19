@@ -8,6 +8,7 @@ category: FAQ
 ---
 
 The bot name can be seen:
+
 * in the channel and (in the connected with this channel) chat — this means you have configured the "Caption"
 * chat only — you will need to reconfigure your bot
 
@@ -28,7 +29,6 @@ The caption is visible in the channel and chat if the message caption setting wa
 ![image](https://user-images.githubusercontent.com/24430718/108638654-533d1200-74a1-11eb-9b13-d8317b521555.png)
 
 If you need to remove this caption in the chat, you must turn it off in the channel settings: Channel → Information → Caption messages (turn it off). After that, the caption will disappear both in the channel and in the connected chat (you cannot turn it off only in one place — this is how Telegram works 🤷‍♂️).
-
 
 ### Chat
 

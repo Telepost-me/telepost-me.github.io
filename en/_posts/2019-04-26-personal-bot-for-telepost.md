@@ -11,7 +11,6 @@ source:
 
 > Please note that for correct work is best to use a new bot in Telepost, which is not connected with other services, such as ControllerBot, Combot and others.
 
-
 ## Create bot
 
 Send to official bot [@BotFather](https://t.me/BotFather) command `/start`. After that it reply the answer on English. Now send command `/newbot`:
@@ -27,7 +26,6 @@ Congratulations, your personal bot has been created! Now you need to connect it 
 
 If you still have questions about this step, please use [more detailed instructions](https://www.hashtap.com/@obzorchik.plus/создаём-бота-в-telegram-rWNgL7Dvwd0v).
 
-
 ## Connecting a bot to Telepost
 
 Go to [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) and send the command `/addbot`:
@@ -36,7 +34,6 @@ Go to [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) and send the c
 Forward to [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) token, which your get from [@BotFather](https://t.me/BotFather):
 ![image](https://user-images.githubusercontent.com/24430718/106514986-0be8e480-64e6-11eb-98b9-b777d17896f1.png)
 
-
-## Done! 
+## Done
 
 The bot was created and added to Telepost. Now add this bot to the admins of the channel where you want to publish posts. See [step #2 here](2019-04-26-getting-started.md) for how to do this.
