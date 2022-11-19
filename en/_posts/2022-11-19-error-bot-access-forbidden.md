@@ -15,4 +15,4 @@ Sometimes a "Channel deactivated" message and a `BOT_ACCESS_FORBIDDEN` error may
 
 In such cases, it helps to switch connected bots in the web interface: switch to the system bot [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}), and then return the custom bot back (or vice versa, if you use the system bot by default).
 
-It is recommended to use your own custom bot, how to connect it — read in [this instruction](_posts/2019-04-26-personal-bot-for-telepost.md).
+It is recommended to use your own custom bot, how to connect it — read in [this instruction](2019-04-26-personal-bot-for-telepost.md).
