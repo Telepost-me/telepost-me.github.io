@@ -1,10 +1,36 @@
 ---
+#################################
+#################################
+## Super Linter GitHub Actions ##
+#################################
+#################################
+name: Lint Code Base
 
+# Start the job on all push
 on: push
+
 jobs:
   build:
+    name: Lint Code Base
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: xt0rted/markdownlint-problem-matcher@v2
-      - run: markdownlint **/*.md --ignore node_modules
+      # Checkout the code base
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          # Full git history is needed to get a proper
+          # list of changed files within `super-linter`
+          fetch-depth: 0
+
+      # Run Linter against code base
+      - name: Lint Code Base
+        uses: github/super-linter/slim@v4
+        env:
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_MARKDOWN: true
+          MARKDOWN_CONFIG_FILE: .markdownlint.yml
+          VALIDATE_YAML: true
+          YAML_CONFIG_FILE: .yamllint.yml
