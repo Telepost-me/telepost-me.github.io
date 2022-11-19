@@ -34,6 +34,6 @@ source:
 Пересылай в [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) токен, который тебе выдал [@BotFather](https://t.me/BotFather):
 ![image](https://user-images.githubusercontent.com/24430718/106514986-0be8e480-64e6-11eb-98b9-b777d17896f1.png)
 
-## Готово
+## Готово!
 
 Бот создан и добавлен в Телепост. Теперь добавь этого бота в админы канала, в котором ты хочешь публиковать посты. Смотри [здесь пункт №2](2019-04-26-getting-started.md), чтобы узнать как это сделать.

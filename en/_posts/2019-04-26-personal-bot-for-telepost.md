@@ -34,6 +34,6 @@ Go to [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) and send the c
 Forward to [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) token, which your get from [@BotFather](https://t.me/BotFather):
 ![image](https://user-images.githubusercontent.com/24430718/106514986-0be8e480-64e6-11eb-98b9-b777d17896f1.png)
 
-## Done
+## Done!
 
 The bot was created and added to Telepost. Now add this bot to the admins of the channel where you want to publish posts. See [step #2 here](2019-04-26-getting-started.md) for how to do this.
