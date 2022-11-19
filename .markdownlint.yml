@@ -1,0 +1,7 @@
+---
+
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013---line-length
+MD013: false
+
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md033---inline-html
+MD033: false
