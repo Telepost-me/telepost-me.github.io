@@ -31,3 +31,4 @@ jobs:
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           VALIDATE_YAML: true
           YAML_CONFIG_FILE: .yamllint.yml
+          VALIDATE_DOCKERFILE_HADOLINT: true
