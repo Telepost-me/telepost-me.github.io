@@ -3,7 +3,7 @@
 language: ruby
 
 install:
-  - pip3 install --user yamllint
+  - pip install --user yamllint
   - bundle install --jobs=3 --retry=3
   - gem install html-proofer -v 3.19.2
 
