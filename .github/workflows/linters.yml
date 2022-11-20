@@ -1,13 +1,13 @@
 ---
 # Super Linter GitHub Actions
-name: Lint Code Base
+name: Linters
 
 # Start the job on all push
 on: push
 
 jobs:
   build:
-    name: Lint Code Base
+    name: Linters
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
           # list of changed files within `super-linter`
           fetch-depth: 0
 
-      # Run Linter against code base
+      # Run linters against code base
       - name: Lint Code Base
         uses: github/super-linter/slim@v4
         env:
