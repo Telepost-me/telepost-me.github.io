@@ -120,5 +120,5 @@ exclude:
   - CNAME
   - vendor
   - docker-compose.yml
-  - *.sh
+  - "*.sh"
   - .*
