@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ошибка CHAT_RESTRICTED
+title: Error CHAT_RESTRICTED
 excerpt: Check the bot permissions, or chat is blocked
 lang: en
 tags: [Instruction, Error]
