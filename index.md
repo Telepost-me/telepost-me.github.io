@@ -1,21 +1,9 @@
 ---
 layout: default
 lang: ru
-github-issues:
-  bugs:
-    title: Известные баги
-    state: open
-    lables:
-      - bug
-    template: bug.yml
-  idea:
-    title: Идеи и предложения
-    state: open
-    lables:
-      - idea
-    template: idea.yml
 ---
 
+<!-- markdownlint-disable MD041 -->
 > Telepost помогает администраторам каналов сократить рутинную работу и сосредоточиться на производстве качественного контента. Здесь есть отложенные посты, визуальный редактор, совместная работа и многое другое. А главное, совершенно **бесплатно**!
 
 <iframe class="status-page" src="https://telepost.instatus.com/embed-status/light-sm" width="230" height="41" frameBorder="0" scrolling="no" style="border: none;"></iframe>
@@ -49,12 +37,16 @@ github-issues:
 ## Я нашел баг!
 
 <!-- markdownlint-disable-next-line -->
-Сначала проверьте список уже известных багов (см. [список ниже](#{{ page.github-issues.bugs.title | url_encode }}){:data-proofer-ignore=''} или [на Github](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in page.github-issues.bugs.lables %}+label%3A{{ label }}{% endfor %})). Не нашли ничего похожего? Тогда смело [добавляйте найденный баг](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.bugs.lables | join: "," }}&template={{ page.github-issues.bugs.template }}) самостоятельно, либо напишите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}).
+Сначала проверьте список уже известных багов (см. [список ниже](#{{ site.data.languages[page.lang].github-issues.bugs.title | url_encode }}){:data-proofer-ignore=''} или [на Github](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in site.github-issues.bugs.lables %}+label%3A{{ label }}{% endfor %})). Не нашли ничего похожего? Тогда смело [добавляйте найденный баг](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ site.github-issues.bugs.lables | join: "," }}&template={{ site.github-issues.bugs.template }}) самостоятельно, либо напишите в [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}).
 
 ## У меня есть идея / предложение
 
 <!-- markdownlint-disable-next-line -->
-Возможно вас опередили, и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in page.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ page.github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ page.github-issues.idea.lables | join: "," }}&template={{ page.github-issues.idea.template }}).
+Возможно вас опередили, и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in site.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ site.data.languages[page.lang].github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ site.github-issues.idea.lables | join: "," }}&template={{ site.github-issues.idea.template }}).
+
+## Хочу отдать голос за идею / багу
+
+Про то, как это можно сделать — расписано на [отдельной странице](_pages/votes.md) (спойлер: поставьте положительную реакцию на GitHub).
 
 ---
 
@@ -67,17 +59,17 @@ github-issues:
   githubIssues(
     "{{ site.github-issues.username }}",
     "{{ site.github-issues.repo }}",
-    "{{ page.github-issues.bugs.state }}",
-    {{ page.github-issues.bugs.lables | jsonify }},
-    "{{ page.github-issues.bugs.title }}"
+    "{{ site.github-issues.bugs.state }}",
+    {{ site.github-issues.bugs.lables | jsonify }},
+    "{{ site.data.languages[page.lang].github-issues.bugs.title }}"
   );
 
   githubIssues(
     "{{ site.github-issues.username }}",
     "{{ site.github-issues.repo }}",
-    "{{ page.github-issues.idea.state }}",
-    {{ page.github-issues.idea.lables | jsonify }},
-    "{{ page.github-issues.idea.title }}"
+    "{{ site.github-issues.idea.state }}",
+    {{ site.github-issues.idea.lables | jsonify }},
+    "{{ site.data.languages[page.lang].github-issues.idea.title }}"
   );
 </script>
 {% endif %}

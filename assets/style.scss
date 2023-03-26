@@ -615,8 +615,18 @@ body:after {
       opacity: 0.5;
 
       .issue-created,
-      .issue-comments-count {
+      .issue-comments-count,
+      .issue-reactions {
         display: inline-block;
+      }
+
+      .issue-reactions {
+        span {
+          border: 1px solid $darkGray;
+          border-radius: 12px;
+          padding: 2px 4px;
+          margin-right: 4px;
+        }
       }
     }
 

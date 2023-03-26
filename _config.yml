@@ -6,6 +6,8 @@
 # Name of your site (displayed in the header)
 title: Telepost
 
+description: "Telepost FAQ site"
+
 # Name of the author
 author: Roman Nikolaev
 
@@ -13,6 +15,16 @@ author: Roman Nikolaev
 github-issues:
   username: Telepost-me
   repo: support
+  bugs:
+    state: open
+    lables:
+      - bug
+    template: bug.yml
+  idea:
+    state: open
+    lables:
+      - idea
+    template: idea.yml
 
 # Telepost Info
 telepost:
