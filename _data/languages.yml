@@ -22,6 +22,11 @@ ru:
     all: Все посты
     index: оглавление
   credits: Основано на теме
+  github-issues:
+    bugs:
+      title: Известные баги
+    idea:
+      title: Идеи и предложения
 
 en:
   label: English
@@ -44,3 +49,8 @@ en:
     all: All posts
     index: index
   credits: Based on theme
+  github-issues:
+    bugs:
+      title: Known bugs
+    idea:
+      title: Ideas and suggestions
