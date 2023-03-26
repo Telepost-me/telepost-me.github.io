@@ -3,6 +3,7 @@ layout: default
 lang: ru
 ---
 
+<!-- markdownlint-disable MD041 -->
 > Telepost помогает администраторам каналов сократить рутинную работу и сосредоточиться на производстве качественного контента. Здесь есть отложенные посты, визуальный редактор, совместная работа и многое другое. А главное, совершенно **бесплатно**!
 
 <iframe class="status-page" src="https://telepost.instatus.com/embed-status/light-sm" width="230" height="41" frameBorder="0" scrolling="no" style="border: none;"></iframe>

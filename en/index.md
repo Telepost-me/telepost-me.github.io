@@ -3,6 +3,7 @@ layout: default
 lang: en
 ---
 
+<!-- markdownlint-disable MD041 -->
 > Telepost helps channels administrators cut down on routine work and focus on producing quality content. It has deferred posts, a visual editor, collaboration, and more. And most importantly, completely **free**!
 
 <iframe class="status-page" src="https://telepost.instatus.com/embed-status/light-sm" width="230" height="41" frameBorder="0" scrolling="no" style="border: none;"></iframe>
