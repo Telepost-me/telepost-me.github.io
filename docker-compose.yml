@@ -1,5 +1,6 @@
 ---
 version: '3.3'
+name: telepost-me_github_io
 services:
   jekyll:
     image: jekyll/jekyll
