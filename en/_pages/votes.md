@@ -5,6 +5,8 @@ lang: en
 permalink: /en/votes/
 ---
 
+<!-- markdownlint-disable MD034 -->
+
 ## Decription
 
 Below is a list of ideas and bugs, sorted by votes (works based on reactions in issues on Github): reactions 👎🏻 and 😕 are subtracted from the total number of reactions (counted as negative - votes against). **Only issues that have at least one reaction are displayed** (the number of all votes is greater than 0)!
