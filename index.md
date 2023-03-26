@@ -44,6 +44,9 @@ lang: ru
 <!-- markdownlint-disable-next-line -->
 Возможно вас опередили, и такая идея уже была добавлена в [общий список](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in site.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (можно [глянуть ниже](#{{ site.data.languages[page.lang].github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). Нет? Тогда вам [сюда](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ site.github-issues.idea.lables | join: "," }}&template={{ site.github-issues.idea.template }}).
 
+## Хочу отдать голос за идею / багу
+
+Про то, как это можно сделать — расписано на [отдельной странице](_pages/votes.md) (спойлер: поставьте положительную реакцию на GitHub).
 
 ---
 

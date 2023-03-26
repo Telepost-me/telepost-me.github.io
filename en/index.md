@@ -44,6 +44,10 @@ First check the list of known bugs (see [list below](#{{ site.data.languages[pag
 <!-- markdownlint-disable-next-line -->
 Perhaps you were ahead of you and similar idea has already been added to the [ideas list](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues?q=is%3Aissue+is%3Aopen{% for label in site.github-issues.idea.lables %}+label%3A{{ label }}{% endfor %}) (you can [look below](#{{ site.data.languages[page.lang].github-issues.idea.title | url_encode }}){:data-proofer-ignore=''}). No? Then you can go [here](https://github.com/{{ site.github-issues.username }}/{{ site.github-issues.repo }}/issues/new?assignees=&labels={{ site.github-issues.idea.lables | join: "," }}&template={{ site.github-issues.idea.template }}).
 
+## I want to vote for an idea / bug
+
+How this can be done is described on [a separate page](_pages/votes.md) (spoiler: put a positive reaction on GitHub).
+
 ---
 
 {% if site.github-issues %}
