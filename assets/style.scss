@@ -622,12 +622,18 @@ body:after {
 
       .issue-reactions {
         span {
-          border: 1px solid $darkGray;
+          border: 1px solid #ddd;
           border-radius: 12px;
           padding: 2px 4px;
           margin-right: 4px;
+          background-color: #f0f0f0;
         }
       }
+    }
+
+    .issue-meta.reactions {
+      opacity: 1;
+      color: $gray;
     }
 
   }
