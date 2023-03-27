@@ -59,8 +59,8 @@ function githubIssuesReactions(username, repo, labels, title) {
         $("div#issue-" + issue.number)
         .append(`<div class="issue-title">#${issue.number} — <a href="${issue.html_url}">${issue.title}</a></div>`)
         .append([
-          `<div class="issue-meta">`,
-            `<div class="issue-reactions" title="Реакции">Голосование (всего реакций — ${issue.reactions.total_count}):`,
+          `<div class="issue-meta reactions">`,
+            `<div class="issue-reactions" title="Для голосования — перейдите в issue по ссылке выше">Реакции (всего ${issue.reactions.total_count}):`,
               `&nbsp;`,
               issue.reactions['+1'] > 0 ? `<span>👍 ${issue.reactions['+1']}</span>` : '',
               issue.reactions['-1'] > 0 ? `<span>👎 ${issue.reactions['-1']}</span>` : '',
