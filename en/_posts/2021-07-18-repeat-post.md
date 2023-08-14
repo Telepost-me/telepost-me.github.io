@@ -35,7 +35,7 @@ To create an auto-publication you need:
   ![image](https://user-images.githubusercontent.com/24430718/126081296-72fd5bc6-44ca-4ec7-9647-c5a1d17e5aec.png)
   ![image](https://user-images.githubusercontent.com/24430718/126081158-b163cacf-f31b-4d2b-a7fd-1ea3f95b1ae5.png)
 
-* Every 3 days at 12:00 (schedule until the end of the month, 07/19/2021 — 07/31/2021):
+* Every 3 days (look at syntax `*/3`) at 12:00 (schedule until the end of the month, 07/19/2021 — 07/31/2021):
   ![image](https://user-images.githubusercontent.com/24430718/126081244-2b79d6c2-4153-46bd-85b8-c9dafbee9f31.png)
 
   ![image](https://user-images.githubusercontent.com/24430718/126081209-09daf9c8-fc48-471d-81b2-b32a3485db77.png)
