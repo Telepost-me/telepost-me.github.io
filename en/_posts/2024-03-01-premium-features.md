@@ -1,0 +1,43 @@
+---
+layout: post
+title: Why are Premium features not supported?
+excerpt: Telepost posts through a bot, not through your personal account
+lang: en
+tags: [Instruction]
+category: FAQ
+---
+
+In 2022, Telegram introduced the opportunity to buy [Premium](https://telegram.org/faq_premium?setln=en) — for subscribing users received a number of benefits, including:
+
+* [upload files up to 4 GB](https://t.me/premium/5)
+* [custom emoji](https://t.me/premium/16)
+* [double limits](https://t.me/premium/3) — here we are interested in the double limit on the number of characters in the signature under media files (2048 characters)
+
+## I have Premium, why I can't use these benefits?
+
+Unfortunately, all these advantages do not apply to the Telepost bot in any way - neither to the system bot [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}), nor to your [personal bot](2019-04-26-personal-bot-for-telepost.md). This is because bots work through the [Telegram Bot API](https://core.telegram.org/bots/api).
+
+## Can I buy Premium for my personal bot?
+
+At the moment — no (see [Telegram FAQ](https://telegram.org/faq_premium#q-can-i-buy-a-premium-subscription-for-my-bots)).
+
+## So, nothing can be done?
+
+There are currently no options in Telepost. There is already a ticket for this "[Support for Premium Telegram accounts](https://github.com/Telepost-me/support/issues/98)" — you can put a reaction 👍 on the first message in the ticket with a description, to show the demand among service users. But it’s not a fact that the Telepost developer will ever implement this feature. Moreover, it will not be free (read more).
+
+Despite all of the above, there are still several options.
+
+### Premium bot
+
+You can try switching to a service that uses a bot with a collectible username ([collectible usernames](https://fragment.com/about#what-is-a-collectible)), purchased from [Fragment](https://fragment.com/). Such a name typically costs several thousand dollars, so such services are almost always paid (or will inevitably become so over time).
+
+Examples of such services:
+
+* [@posted](https://posted.t.me/)
+* [@Expert_ProMaker_bot](https://expert_promaker_bot.t.me/)
+
+### Post manually
+
+A workaround is to make posts that require Premium features from your Telegram account directly.
+
+Or edit posts manually in Telegram after they are published by Telepost (not recommended, there may be unexpected effects in the form of a missing link to the attachment, etc.).
