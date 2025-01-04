@@ -22,16 +22,11 @@ services:
     command: ${DOCKER_COMPOSE_YAMLLINT_OPTIONS} .
 
   html-proofer:
-    image: ${DOCKER_COMPOSE_HTMLPROOFER_LOCAL_IMAGE}
+    image: ${DOCKER_COMPOSE_HTMLPROOFER_IMAGE}
     container_name: ${DOCKER_COMPOSE_HTMLPROOFER_CONTAINER}
-    # Build image for linting purpose only!
-    build:
-      context: .
-      dockerfile_inline: |
-        FROM ${DOCKER_COMPOSE_JEKYLL_IMAGE} as jekyll
-        COPY . ${DOCKER_COMPOSE_JEKYLL_PATH}
-        RUN jekyll build
-
-        FROM ${DOCKER_COMPOSE_HTMLPROOFER_IMAGE}
-        COPY --from=jekyll ${DOCKER_COMPOSE_JEKYLL_PATH}/_site ${DOCKER_COMPOSE_HTMLPROOFER_PATH}
+    depends_on:
+      - jekyll-site
+    volumes:
+      - ./_site:${DOCKER_COMPOSE_HTMLPROOFER_PATH}
+    working_dir: ${DOCKER_COMPOSE_HTMLPROOFER_PATH}
     command: ${DOCKER_COMPOSE_HTMLPROOFER_PATH} ${DOCKER_COMPOSE_HTMLPROOFER_OPTIONS}
