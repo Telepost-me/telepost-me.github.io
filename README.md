@@ -19,48 +19,37 @@ Telepost помогает администраторам каналов сокр
 
 ## Поддержка
 
-* [Телеграм-чат](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
-* [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-* [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
+- [Телеграм-чат](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
+- [Известные баги](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+- [Список идей](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
-## Запуск и отладка сайта (Docker)
+## Запуск сайта
 
-Для запуска и проверки сайта локально потребуется установить только [Docker Desktop](https://docs.docker.com/desktop/).
+Для запуска и проверки сайта локально потребуется только [Docker Compose](https://docs.docker.com/compose/).
 
-Запускаем:
+### Подготовка
 
-* через Docker
+Установите [Docker Desktop](https://docs.docker.com/desktop/) (Docker Engine и Docker Compose — идут "в коробке").
 
-   ```bash
-   docker run --rm \
-      --volume="$PWD:/srv/jekyll" \
-      -p 4000:4000 \
-      -p 35729:35729 \
-      jekyll/jekyll jekyll serve --incremental --force_polling
-   ```
+При необходимости вы можете (если это действительно нужно) переменные для сервисов [docker-compose.yml](./docker-compose.yml) в файле [`.env`](./.env).
 
-   или просто запустите скрипт [`./run.sh`](run.sh)
+### Запуск
 
-* через Docker Compose (используется [docker-compose.yml](docker-compose.yml))
+- Запустите сайт с помощью Docker Compose командой: `make site` или просто `make`
+- Откройте сайт по адресу: <http:/localhost:4000/>
 
-   ```bash
-   docker-compose up
-   ```
+## Линтеры
 
-Ваш сайт должен быть доступен по адресу: <http://127.0.0.1:4000/>
+Не забывайте прогонять линтеры после внесения изменений! Запустить сразу все линтеры можно командой: `make lint`
 
-## Линтер [HTMLProofer](https://github.com/gjtorikian/html-proofer)
+### YAML lint
 
-После внесения всех изменений не забудьте прогнать линтер.
+- Запустите проверку правильности синтаксиса YAML (используется [yamllint](https://yamllint.readthedocs.io/en/stable/)) с помощью Docker Compose командой: `make yaml-lint`
 
-Билдим сайт из исходников и запускаем через Docker (используется файл [Dockerfile](Dockerfile)):
+### HTML Proofer
 
-```bash
-docker build -t jekyll-site .
-docker run --rm -it jekyll-site --check-html --disable-external
-```
-
-или просто запустите скрипт [`./run-htmlproofer.sh`](run-htmlproofer.sh).
+- Запустите проверку валидности HTML-кода (используется [HTML Proofer](https://github.com/gjtorikian/html-proofer)) с помощью Docker Compose командой: `make html-proofer`
+- Посмотрите на ошибки в выводе (если есть) и исправьте их!
 
 ## Автор
 

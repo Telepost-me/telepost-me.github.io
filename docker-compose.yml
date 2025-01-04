@@ -1,12 +1,40 @@
 ---
-version: '3.3'
-name: telepost-me_github_io
+# See .env for variables
+
+name: ${DOCKER_COMPOSE_NAME}
 services:
-  jekyll:
-    image: jekyll/jekyll
+  jekyll-site:
+    image: ${DOCKER_COMPOSE_JEKYLL_IMAGE}
+    container_name: ${DOCKER_COMPOSE_JEKYLL_CONTAINER}
     volumes:
-      - './:/srv/jekyll'
+      - ./:${DOCKER_COMPOSE_JEKYLL_PATH}
     ports:
-      - '4000:4000'
-      - '35729:35729'
-    command: jekyll serve --incremental --livereload --force_polling
+      - ${DOCKER_COMPOSE_JEKYLL_PORT}:4000
+      - 35729:35729
+    command: jekyll serve ${DOCKER_COMPOSE_JEKYLL_OPTIONS}
+
+  jekyll-build:
+    image: ${DOCKER_COMPOSE_JEKYLL_IMAGE}
+    container_name: ${DOCKER_COMPOSE_JEKYLL_CONTAINER}-build
+    volumes:
+      - ./:${DOCKER_COMPOSE_JEKYLL_PATH}
+    command: jekyll build
+
+  yaml-lint:
+    image: ${DOCKER_COMPOSE_YAMLLINT_IMAGE}
+    container_name: ${DOCKER_COMPOSE_YAMLLINT_CONTAINER}
+    volumes:
+      - ./:${DOCKER_COMPOSE_YAMLLINT_PATH}
+    working_dir: ${DOCKER_COMPOSE_YAMLLINT_PATH}
+    command: ${DOCKER_COMPOSE_YAMLLINT_OPTIONS} .
+
+  html-proofer:
+    image: ${DOCKER_COMPOSE_HTMLPROOFER_IMAGE}
+    container_name: ${DOCKER_COMPOSE_HTMLPROOFER_CONTAINER}
+    depends_on:
+      jekyll-build:
+        condition: service_completed_successfully
+    volumes:
+      - ./_site:${DOCKER_COMPOSE_HTMLPROOFER_PATH}
+    working_dir: ${DOCKER_COMPOSE_HTMLPROOFER_PATH}
+    command: ${DOCKER_COMPOSE_HTMLPROOFER_PATH} ${DOCKER_COMPOSE_HTMLPROOFER_OPTIONS}

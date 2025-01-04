@@ -117,20 +117,21 @@ plugins:
   - jekyll-seo-tag
   - jekyll-relative-links
 
-include: ['_pages']
-
 improve_link:
   enable: true
   hide_on_mobiles: true
 
-# Exclude these files from your production _site
+# Include these files/folders from your production _site
+include: ['_pages']
+
+# Exclude these files/folders from your production _site
 exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
-  - README*.md
+  - README.md
+  - README.en.md
   - CNAME
   - vendor
   - docker-compose.yml
-  - "*.sh"
-  - .*
+  - .github/

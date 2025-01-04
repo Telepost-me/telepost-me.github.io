@@ -3,7 +3,7 @@
 name: Linters
 
 # Start the job on all push
-on: push
+on: push  # yamllint disable-line rule:truthy
 
 jobs:
   build:
