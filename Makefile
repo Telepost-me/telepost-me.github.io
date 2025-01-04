@@ -15,10 +15,10 @@ yaml-lint:
 	@echo "-> Lint YAML files via Docker Compose..."
 	@docker compose up yaml-lint
 
-html-proofer:
+html-proofer: .cleanup
 	@echo
 	@echo "-> Build & run HTMLProofer via Docker Compose..."
-	@docker compose up html-proofer $@
+	@docker compose up html-proofer
 
 lint: yaml-lint html-proofer
 
