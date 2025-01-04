@@ -20,14 +20,34 @@ To connect chat (group) — do the same in Group Settings.
 
 ## Connect channel/chat to Telepost
 
+The channel and chat can be public (can be found in the general search) or private (cannot be found in the general search, can only be joined via an invite link).
+
+### Public channel/chat
+
 If your have public channel, forward to bot any message from channel. Also in case of public channel/group your can send their username to bot.
 
-In case of private channel or group — your need to send to the bot channel/group ID accordingly. To find ID your can use bots:
-
-* [@super_id_bot](https://t.me/super_id_bot) – in groups use command `/chat_id`
-* [@myidbot](https://t.me/myidbot) – use command `/getid`
-
 ![image](https://user-images.githubusercontent.com/24430718/106523817-be26a900-64f2-11eb-8396-f31931dc63f0.png)
+
+### Private channel/chat
+
+If you have a closed channel or group, you need to send the bot the channel or group ID, respectively. You can find out the ID in several ways.
+
+1. With these bots:
+   * [@getmyid_bot](https://t.me/getmyid_bot) – forward any message from private channel/chat
+   * [@myidbot](https://t.me/myidbot) – use command `/getid`
+
+   ⚠️ Most likely, you will need to add `100` to the received id.  
+   For example, if the id of your private channel is `1234567890` (the number of digits in your case may be different), then you need to send the following id to the Telepost bot: `1001234567890`.
+
+1. Via the web version of Telegram:
+   * Log in to <https://web.telegram.org/>
+   * Find the desired channel/chat and enter it
+   * In the browser, in the field with the URL, you will see something like `https://web.telegram.org/a/#-1001234567890` - copy the entire set of numbers that come after the minus sign, in this example you should get `1001234567890` - this is the id
+
+1. If all the previous options did not help, there is a workaround:
+   * temporarily make the channel public
+   * add the channel to Telepost by forwarding any post from the public channel to the bot
+   * make the channel private again
 
 ## Activate bot
 
