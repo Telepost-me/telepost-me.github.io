@@ -11,7 +11,7 @@ In Telegram, you can send [video messages](https://telegram.org/blog/video-messa
 
 There are two ways to create a post through Telepost with a round video:
 
-1. via a bot (system [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) or [you own bot](2019-04-26-personal-bot-for-telepost .md))
+1. via a bot (system [{{ site.telepost.bot.name }}]({{ site.telepost.bot.url }}) or [you own bot](2019-04-26-personal-bot-for-telepost.md))
 
     To do this, just start creating post in the bot and send your round video to the bot:
     ![image](https://github.com/Telepost-me/support/assets/24430718/c6887d78-7531-4b1d-91dd-3a9afb8b2347)
