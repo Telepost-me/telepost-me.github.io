@@ -1,4 +1,4 @@
-.PHONY: site lint yaml-lint html-proofer all
+.PHONY: site lint down yaml-lint html-proofer all
 
 .cleanup:
 	@echo
@@ -21,5 +21,10 @@ html-proofer:
 	@docker compose up html-proofer $@
 
 lint: yaml-lint html-proofer
+
+down:
+	@echo
+	@echo "-> Docker Compose — down..."
+	@docker compose down
 
 all: site lint
