@@ -19,48 +19,38 @@ Before asking a question — [read the FAQ](https://telepost-me.github.io/faq)!
 
 ## Support
 
-* [Telegram chat](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
-* [Known bugs](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-* [Ideas list](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
+- [Telegram chat](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
+- [Known bugs](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+- [Ideas list](https://github.com/Telepost-me/support/issues?q=is%3Aissue+is%3Aopen+label%3Aidea)
 
-## Site launch & debugging (Docker)
+## Launch site
 
-To launch and verify site local, your only need to install [Docker Desktop](https://docs.docker.com/desktop/).
+Local site & linters can be launched via [Docker Compose](https://docs.docker.com/compose/).
 
-Launch:
+### Prepare
 
-* using Docker
+Install [Docker Desktop](https://docs.docker.com/desktop/) (Docker Engine & Docker Compose — already included).
 
-   ```bash
-   docker run --rm \
-      --volume="$PWD:/srv/jekyll" \
-      -p 4000:4000 \
-      jekyll/jekyll jekyll serve --incremental --force_polling
-   ```
+Then your can change (if needed) variables for [docker-compose.yml](./docker-compose.yml) services in file [`.env`](./.env).
 
-   or just use script [`./run.sh`](run.sh)
+### Launch
 
-* using Docker Compose (see [docker-compose.yml](docker-compose.yml))
+- Run site via Docker Compose: `make site` or just `make`
+- Open you site: <http:/localhost:4000/>
 
-   ```bash
-   docker-compose up
-   ```
+## Linters
 
-Your site will work here: <http://127.0.0.1:4000/>.
+Don't forget to run linters after making changes! Run all linters: `make lint`
 
-### Linter [HTMLProofer](https://github.com/gjtorikian/html-proofer)
+### YAML lint
 
-Don't forget to launch linter to verify your changes.
+- Run [yamllint](https://yamllint.readthedocs.io/en/stable/) via Docker: `make yaml-lint`
 
-Building site from sources & launch it using Docker (see [Dockerfile](Dockerfile)):
+### HTML Proofer
 
-```bash
-docker build -t jekyll-site .
-docker run --rm -it jekyll-site --check-html --disable-external
-```
-
-or just use script [`./run-htmlproofer.sh`](run-htmlproofer.sh).
+- Run [HTML Proofer](https://github.com/gjtorikian/html-proofer) via Docker Compose: `make html-proofer`
+- Check output errors (if exist) and fix it!
 
 ## Author
 
-* [@Nikolaev-RD](https://github.com/nikolaev-rd)
+- [@Nikolaev-RD](https://github.com/nikolaev-rd)
