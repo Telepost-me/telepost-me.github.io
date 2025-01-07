@@ -1,7 +1,7 @@
 # <a href="https://telepost.me/">Telepost</a> <img src="images/telepost_icon-194x194.png" alt="Telepost logo" align="right" />
 
 [![GitHub Super-Linter](https://github.com/Telepost-me/telepost-me.github.io/workflows/Linters/badge.svg)](https://github.com/marketplace/actions/super-linter)
-[![Build Status](https://travis-ci.com/Telepost-me/telepost-me.github.io.svg?branch=master)](https://travis-ci.com/Telepost-me/telepost-me.github.io)
+[![pages-build-deployment](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?event=deployment_status)](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/pages/pages-build-deployment)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTelepost-me%2Ftelepost-me.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=telegram.svg&icon_color=%23F5F5F5&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Telepost Support — чат](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
 
