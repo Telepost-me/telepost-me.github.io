@@ -1,0 +1,35 @@
+---
+# Super Linter GitHub Actions
+name: Checks
+
+# Start the job on all push
+on: push  # yamllint disable-line rule:truthy
+
+jobs:
+  html-check:
+    name: HTML Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code base
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          # The directory to scan
+          directory: "./_site"
+          # The arguments to pass to HTMLProofer
+          arguments: --allow-missing-href --disable-external --no-enforce-https
