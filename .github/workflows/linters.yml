@@ -7,7 +7,7 @@ on: push  # yamllint disable-line rule:truthy
 
 jobs:
   lint:
-    name: Linters
+    name: Super Linters
     runs-on: ubuntu-latest
 
     steps:

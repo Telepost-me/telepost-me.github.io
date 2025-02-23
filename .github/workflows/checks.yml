@@ -6,30 +6,25 @@ name: Checks
 on: push  # yamllint disable-line rule:truthy
 
 jobs:
-  check:
-    name: Checks
+  html-check:
+    name: HTML Checks
     runs-on: ubuntu-latest
 
     steps:
       # Checkout the code base
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          # Full git history is needed to get a proper
-          # list of changed files within `super-linter`
-          fetch-depth: 0
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
       - name: Check HTML
         uses: chabad360/htmlproofer@master
