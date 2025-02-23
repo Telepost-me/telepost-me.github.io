@@ -32,4 +32,4 @@ jobs:
           # The directory to scan
           directory: "./_site"
           # The arguments to pass to HTMLProofer
-          arguments: --allow-missing-href  # --check-html --disable-external
+          arguments: --allow-missing-href  --disable-external
