@@ -12,17 +12,7 @@ layout: default
 
   <div>
     <p class="author_title">
-      {{ page.date | date: "%Y.%m.%d" }} · 
-      <span class="post-categories">
-        {%- assign langs = site.posts | map: "lang" | uniq -%}
-        {%- assign categories = page.categories -%}
-        {%- for category in categories -%}
-        {%- unless langs contains category -%}
-          <a href="{{ site.baseurl }}{{ lang_prefix }}/categories/#{{ category | slugize }}">{{ category }}</a>
-          {% unless forloop.last %} | {% endunless %}
-        {%- endunless -%}
-        {%- endfor -%}
-      </span>
+      {{ page.date | date: "%Y.%m.%d" }}
     </p>
     <div class="post-tags">
       {%- if post -%}

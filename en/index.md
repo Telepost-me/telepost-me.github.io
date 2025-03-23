@@ -27,7 +27,7 @@ Sometimes errors may occur while writing/editing a post through the Web UI. In t
 
 ## Use [FAQ](_pages/faq.md), Luke!
 
-Did the tips above help you? Don't despair and read the [FAQ](_pages/faq.md) — for sure there is already an answer for your question. For your convenience, there is [search](_pages/search.md) through all pages and posts on this site. Also, all content is organized into [categories](_pages/categories.md) and often is labeled with [tags](_pages/tags.md).
+Did the tips above help you? Don't despair and read the [FAQ](_pages/faq.md) — for sure there is already an answer for your question. For your convenience, there is [search](_pages/search.md) through all pages and posts on this site. Also, all content is labeled with [tags](_pages/tags.md).
 
 Didn't find the answer? Then feel free to go to [{{ site.telepost.support-chat.name }}]({{ site.telepost.support-chat.url }}) and ask your question there.
 
