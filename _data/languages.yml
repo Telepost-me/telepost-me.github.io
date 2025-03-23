@@ -17,7 +17,7 @@ ru:
     categories: Категории
     tags: Теги
     check: 🔮
-    search: 🔍
+    search: Поиск
   faq:
     all: Все посты
     index: оглавление
@@ -44,7 +44,7 @@ en:
     categories: Categories
     tags: Tags
     check: 🔮
-    search: 🔍
+    search: Search
   faq:
     all: All posts
     index: index
