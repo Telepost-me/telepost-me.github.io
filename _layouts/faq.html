@@ -7,7 +7,8 @@ layout: default
   <h1 class="title">{{ page.title }}</h1>
 
   <ul>
-    {% for post in site.posts reversed %}
+    {% assign posts = site.posts | sort: "title" %}
+    {% for post in posts %}
     {% if page.lang == post.lang %}
       <li>
         <a href="{{ post.url }}" title="{{ post.excerpt | remove: '"' }}">{% if post.title != "" %}{{ post.title }}{% else %}{{ post.url | remove: '/' | replace: '-', ' ' | capitalize }}{% endif %}</a>
