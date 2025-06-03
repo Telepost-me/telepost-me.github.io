@@ -1,0 +1,48 @@
+---
+description: Telepost has nothing to do with it, for this you need to configure your channel / chat or bot
+tags:
+  - Tutorial
+  - Setup
+  - Bot
+  - Anonymity
+---
+
+# Anonymity: how to show / hide the bot name in posts?
+
+The bot name can be seen:
+
+* in the channel and (in the connected with this channel) chat — this means you have configured the "Caption"
+* chat only — you will need to reconfigure your bot
+
+Let's consider both options.
+
+## Channel
+
+Avatar from the channel, but the name of the bot is visible. It looks something like this (in desktop clients — at the top right, in mobile clients — at the bottom):
+
+* in the channel:
+  ![image](https://user-images.githubusercontent.com/24430718/108638558-eaee3080-74a0-11eb-9257-e40c5fc08456.png)
+
+* in the chat (differs in the source label - "channel"):
+  ![image](https://user-images.githubusercontent.com/24430718/108638076-8205b900-749e-11eb-83b1-0943e89ed681.png)
+
+The caption is visible in the channel and chat if the message caption setting was enabled:
+
+![image](https://user-images.githubusercontent.com/24430718/108638654-533d1200-74a1-11eb-9b13-d8317b521555.png)
+
+If you need to remove this caption in the chat, you must turn it off in the channel settings: Channel → Information → Caption messages (turn it off). After that, the caption will disappear both in the channel and in the connected chat (you cannot turn it off only in one place — this is how Telegram works 🤷‍♂️).
+
+## Chat
+
+Often, a Telepost personal bot is configured to publish posts directly in the chat ([instructions for the initial setup](../start/getting-started.mdx)).
+
+In this case, the avatar and the name of the bot itself are visible — it looks like a regular message from the user in the chat:
+
+![image](https://user-images.githubusercontent.com/24430718/108639081-ac0daa00-74a3-11eb-9012-aadfb59a5d95.png)
+
+Adding permissions to the bot ["Anonymity" in the chat settings](https://telegram.org/blog/filters-anonymous-admins-comments/ru?ln=a#anonimnie-administratori-v-gruppah) in fact does not give the expected result — publications from the bot are not made anonymous and are not hidden with the icon and the name of the chat (it looks like this is how Telegram works 🤷‍♂️):
+
+![image](https://user-images.githubusercontent.com/24430718/108638959-f7738880-74a2-11eb-9633-2ae6cb2e0976.png)
+
+<!-- markdownlint-disable-next-line MD033 -->
+We can only advise you to change the avatar and the visible name of the bot to those used in your chat. To do this in the bot [@BotFather](https://t.me/BotFather) use [commands](https://core.telegram.org/bots#botfather-commands) `/setname` and `/setuserpic` or inline-buttons <kbd>Edit bot</kbd> → <kbd>Edit Name</kbd> and <kbd>Edit Botpic</kbd> set a name and picture — both the same as in your chat. Then it will visually look like if the publications are sent on behalf of the chat.

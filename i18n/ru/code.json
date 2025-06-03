@@ -1,0 +1,22 @@
+{
+  "theme.NotFound.title": {
+    "message": "Страница не найдена",
+    "description": "The title of the 404 page"
+  },
+  "theme.NotFound.mainPage": {
+    "message": "главную страницу",
+    "description": "Text for link to main page"
+  },
+  "theme.NotFound.search": {
+    "message": "поиском",
+    "description": "Text for link to search page"
+  },
+  "theme.NotFound.p1": {
+    "message": "Страница, которую вы пытаетесь открыть — не существует, либо поменялся её URL 🫤",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Вы можете вернуться на {mainPageLink} или воспользоваться {searchLink} по сайту.",
+    "description": "The 2nd paragraph of the 404 page"
+  }
+}

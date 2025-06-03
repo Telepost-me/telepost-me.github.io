@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Старт": {
+    "message": "Start",
+    "description": "The label for category Старт in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.FAQ": {
+    "message": "FAQ",
+    "description": "The label for category FAQ in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Туториалы": {
+    "message": "Tutorials",
+    "description": "The label for category Туториалы in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Ошибки и проблемы": {
+    "message": "Errors & problems",
+    "description": "The label for category Ошибки и проблемы in sidebar docsSidebar"
+  }
+}

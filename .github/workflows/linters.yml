@@ -21,16 +21,14 @@ jobs:
 
       # Run linters against code base
       - name: Lint Code Base
-        uses: github/super-linter/slim@v4
+        uses: github/super-linter/slim@v7
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: /
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           VALIDATE_MARKDOWN: true
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           VALIDATE_YAML: true
           YAML_CONFIG_FILE: .yamllint.yml
-          VALIDATE_DOCKERFILE_HADOLINT: true
-          DOCKERFILE_HADOLINT_FILE_NAME: .hadolint.yml
           VALIDATE_GITHUB_ACTIONS: true

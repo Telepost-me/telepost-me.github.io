@@ -1,0 +1,20 @@
+---
+description: Скорее всего в этом виновата EXIF-информация
+tags:
+  - FAQ
+  - Пост
+  - Текст
+  - Фото
+  - Веб-версия
+---
+
+# Почему при загрузке фото оно переворачивается?
+
+Иногда при загрузке фотографий в Телепост (в посте с типами «Текст» или «Фото») фотография переворачивается. Это происходит из-за того, что в файле фотографии содержится мета-информация в формате [EXIF](https://ru.wikipedia.org/wiki/EXIF) — в том числе и то, какой поворот камеры был в момент съёмки.
+
+Для того, чтобы мета-информация не влияла на поворот фотографии, необходимо удалить EXIF-данные. Можно воспользоваться, например, такими программами (огромная подборка есть на [Википедии](https://ru.wikipedia.org/wiki/Специальные_программы_для_работы_с_метаданными)):
+
+* Windows: [Easy Exif Delete](http://www.easyexifdelete.com/)
+* MacOS: [EXIFPurge](https://apps.apple.com/ru/app/exifpurge/id784466108?mt=12)
+* Android: [Scrambled Exif](https://play.google.com/store/apps/details?id=com.jarsilio.android.scrambledeggsif), [Photo Exif Editor](https://play.google.com/store/apps/details?id=net.xnano.android.photoexifeditor)
+* iOS: [Metapho](https://apps.apple.com/ru/app/metapho/id914457352)

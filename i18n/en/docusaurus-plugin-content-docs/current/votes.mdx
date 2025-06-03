@@ -1,0 +1,39 @@
+# Voting for ideas/bugs
+
+On this page you will find is a description of the process on how you can vote for any idea/suggestion or bug. Perhaps these votes will influence the choice of what the Telepost service developer will pay attention to first (but this is not certain).
+
+## Decription
+
+Below is a list of ideas and bugs, sorted by votes (works based on reactions in issues on Github): reactions 👎 and 😕 are subtracted from the total number of reactions (counted as negative - votes against). **Only issues that have at least one reaction are displayed** (the number of all votes is greater than 0)!
+
+<!-- markdownlint-disable-next-line MD033 -->
+If the list below is empty, or the required issue is not in this list, then you can see the list of issues sorted by reactions directly on GitHub (press <kbd>Sort</kbd>, the drop-down list will contain "Most reactions", and select the reaction to sort). Example for the reaction "👍":
+
+* [Ideas]({{ github.issues.ideas.url }}+sort%3Areactions-%2B1-desc)
+* [Bugs]({{ github.issues.bugs.url }}+sort%3Areactions-%2B1-desc)
+
+## How to vote
+
+In order to vote for this or that idea / bug (this will help to better understand what is more important to users), you need to:
+
+1. go to [Github to issues page]({{ github.issues.url }}+is%3Aopen)
+1. log in to GitHub under your account (create it if you don't have)
+1. open the required issue and put the appropriate reaction under the description of the issue
+
+import GithubIssuesReactions from '@site/src/components/GithubIssuesReactions';
+
+## 🐞 Bugs with votes {#bugs-with-votes}
+
+<GithubIssuesReactions
+  username="{{ github.organizationName }}"
+  repo="{{ github.issues.repo }}"
+  labels={ {{ github.issues.bugs.labels }} }
+/>
+
+## 💡 Ideas with votes {#ideas-with-votes}
+
+<GithubIssuesReactions
+  username="{{ github.organizationName }}"
+  repo="{{ github.issues.repo }}"
+  labels={ {{ github.issues.ideas.labels }} }
+/>

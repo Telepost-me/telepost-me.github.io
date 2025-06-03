@@ -6,30 +6,20 @@ name: Checks
 on: push  # yamllint disable-line rule:truthy
 
 jobs:
-  html-check:
-    name: HTML Checks
+  # https://docusaurus.io/docs/deployment#deploying-to-github-pages
+  test-build:
+    name: Test build
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout the code base
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - uses: actions/checkout@v4
         with:
-          source: ./
-          destination: ./_site
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-      - name: Check HTML
-        uses: chabad360/htmlproofer@master
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
         with:
-          # The directory to scan
-          directory: "./_site"
-          # The arguments to pass to HTMLProofer
-          arguments: --allow-missing-href --disable-external --no-enforce-https
+          node-version: 23
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install-clean
+      - name: Build website
+        run: npm run build

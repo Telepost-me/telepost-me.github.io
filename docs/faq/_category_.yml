@@ -1,0 +1,7 @@
+---
+position: 3
+label: FAQ
+collapsible: true
+collapsed: false
+link:
+  type: generated-index

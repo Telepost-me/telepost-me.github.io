@@ -1,0 +1,19 @@
+---
+description: Most likely the reason is in EXIF metadata
+tags:
+  - FAQ
+  - Post
+  - Text
+  - Photo
+---
+
+# Why does the uploaded photo rotated?
+
+Sometimes, when uploading photos to Telepost (in a post with the "Text" or "Photo" type), the photo is turned upside down. This is due to the fact that the photo file contains meta-information in [EXIF format](https://en.wikipedia.org/wiki/Exif) — its contains what kind of camera rotation was at the time of shooting.
+
+In order for the meta information not to affect the rotation of the photo, it is necessary to delete the EXIF data. You can use, for example, this programs (there is a huge list on [Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_digital_image_metadata_editors)):
+
+* Windows: [Easy Exif Delete](http://www.easyexifdelete.com/)
+* MacOS: [EXIFPurge](https://apps.apple.com/ru/app/exifpurge/id784466108?mt=12)
+* Android: [Scrambled Exif](https://play.google.com/store/apps/details?id=com.jarsilio.android.scrambledeggsif), [Photo Exif Editor](https://play.google.com/store/apps/details?id=net.xnano.android.photoexifeditor)
+* iOS: [Metapho](https://apps.apple.com/ru/app/metapho/id914457352)
