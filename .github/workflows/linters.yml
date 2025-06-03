@@ -26,10 +26,9 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LINTER_RULES_PATH: /
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           VALIDATE_MARKDOWN: true
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           VALIDATE_YAML: true
           YAML_CONFIG_FILE: .yamllint.yml
-          VALIDATE_DOCKERFILE_HADOLINT: false
           VALIDATE_GITHUB_ACTIONS: true
