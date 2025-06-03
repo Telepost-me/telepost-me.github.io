@@ -1,0 +1,91 @@
+---
+slug: /
+sidebar_position: 1
+---
+
+# Intro
+
+<!-- markdownlint-disable MD041 -->
+> Telepost helps channels administrators cut down on routine work and focus on producing quality content. It has deferred posts, a visual editor, collaboration, and more. And most importantly, completely **free**!
+
+<!-- markdownlint-disable-next-line MD033 -->
+<iframe
+    className="status-page"
+    src="https://telepost.instatus.com/embed-status/light-sm"
+    width="250"
+    height="41"
+    frameBorder="0"
+    scrolling="no"
+>
+</iframe>
+
+The mini-portal was created to help users of the service [{{ telepost.site.name }}]({{ telepost.site.url }}). For all questions, it is better to contact the [Support chat in Telegram]({{ telepost.supportChat.url }}). The service has:
+
+* [Web UI]({{ telepost.webApp.url }})
+* [Telegram bot]({{ telepost.bot.url }}) (but it's better to use [you own bot](start/personal-bot-for-telepost.mdx))
+
+## Troubleshooting
+
+If you do not see pictures in the Web UI of Telepost, or, conversely, pictures are not loaded into the post through the Web UI - [check on a special page](check.mdx) for any blocked important resources.
+
+For other problems while working with the Web UI, first try:
+
+* clear site cache / open site in incognito mode
+* clear cookies
+* open the site in another browser / mobile
+
+Sometimes errors may occur while writing/editing a post through the Web UI. In this case, try to start writing a post from scratch (recreating a post).
+
+<!-- markdownlint-disable-next-line MD026 -->
+## Use FAQ, Luke!
+
+<!-- markdownlint-disable-next-line MD033 -->
+Did the tips above help you? Don't despair and read the FAQ — for sure there is already an answer for your question. For your convenience, there is [search](/search) through all pages and posts on this site. Also, all content is labeled with tags.
+
+Didn't find the answer? Then feel free to go to [{{ telepost.supportChat.name }}]({{ telepost.supportChat.url }}) and ask your question there.
+
+<!-- markdownlint-disable-next-line -->
+Want to add instructions? You can also notify about it in [{{ telepost.supportChat.name }}]({{ telepost.supportChat.url }}), or add a post yourself — create Pull Request to [this repository]({{ github.projectUrl }}).
+
+<!-- markdownlint-disable-next-line MD026 -->
+## I found a bug!
+
+<!-- markdownlint-disable-next-line -->
+First check the list of known bugs (see [list below](#known-bugs) or [on Github]({{ github.issues.bugs.url }})). Didn't find anything similar? Then feel free to [add founded bug]({{ github.issues.bugs.urlTemplate }}) yourself, or write to [{{ telepost.supportChat.name }}]({{ telepost.supportChat.url }}).
+
+## I have an idea / suggestion
+
+<!-- markdownlint-disable-next-line -->
+Perhaps you were ahead of you and similar idea has already been added to the [ideas list]({{ github.issues.ideas.url }}) (you can [look below](#ideas)). No? Then you can go [here]({{ github.issues.ideas.urlTemplate }}).
+
+## I want to vote for an idea / bug
+
+How this can be done is described on [a separate page](votes.mdx) (spoiler: put a positive reaction on GitHub).
+
+---
+
+import GithubIssues from '@site/src/components/GithubIssues';
+
+## 🐞 Known bugs {#known-bugs}
+
+<GithubIssues
+  username="{{ github.organizationName }}"
+  repo="{{ github.issues.repo }}"
+  states={ {{ github.issues.bugs.states }} }
+  labels={ {{ github.issues.bugs.labels }} }
+  i18n={{
+    totalFound: 'Total bugs found',
+  }}
+/>
+
+## 💡 Ideas and suggestions {#ideas}
+
+<GithubIssues
+  username="{{ github.organizationName }}"
+  repo="{{ github.issues.repo }}"
+  states={ {{ github.issues.ideas.states }} }
+  labels={ {{ github.issues.ideas.labels }} }
+  i18n={{
+    totalFound: 'Total ideas/suggestions found',
+  }}
+/>

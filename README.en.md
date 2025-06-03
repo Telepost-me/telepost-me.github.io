@@ -1,13 +1,16 @@
-# <a href="https://telepost.me/">Telepost</a> <img src="images/telepost_icon-194x194.png" alt="Telepost logo" align="right" />
+<!-- markdownlint-disable-next-line MD033 -->
+# <a href="https://telepost.me/">Telepost</a> <img src="static/img/telepost_icon-194x194.png" alt="Telepost logo" align="right" />
 
-[![GitHub Super-Linter](https://github.com/Telepost-me/telepost-me.github.io/workflows/Linters/badge.svg)](https://github.com/marketplace/actions/super-linter)
-[![Pages Deploy](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/pages/pages-build-deployment)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTelepost-me%2Ftelepost-me.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=telegram.svg&icon_color=%23F5F5F5&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-[![Telepost Support — chat](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
+[![Linters](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/linters.yml/badge.svg)](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/linters.yml)
+[![Pages Deploy](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/deploy.yml)
+[![Telepost Support — чат](https://shields.io/badge/Telepost-Чат-green?logo=telegram&style=social)](https://t.me/joinchat/Ypg01CdfpW5jNWFi)
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable MD033 -->
 <p align="center">
    <a href="README.md">🇷🇺 Русский</a> | <a href="README.en.md">🇺🇸 English</a>
 </p>
+<!-- markdownlint-restore -->
 
 **The best postponed posting for Telegram!**
 
@@ -35,8 +38,9 @@ Then your can change (if needed) variables for [docker-compose.yml](./docker-com
 
 ### Launch
 
-- Run site via Docker Compose: `make site` or just `make`
-- Open you site: <http:/localhost:4000/>
+- Run site via Docker Compose: `make site-start` or just `make`
+  - To test search and translation (i18n) - you need to run site in `serve` mode (but the "live reload" function will not work): `make site-serve`
+- Open you site: <http:/localhost:3000/>
 
 ## Linters
 
@@ -44,12 +48,11 @@ Don't forget to run linters after making changes! Run all linters: `make lint`
 
 ### YAML lint
 
-- Run [yamllint](https://yamllint.readthedocs.io/en/stable/) via Docker: `make yaml-lint`
+- Run [yamllint](https://yamllint.readthedocs.io/en/stable/) via Docker Compose: `make yaml-lint`
 
-### HTML Proofer
+### Markdown lint
 
-- Run [HTML Proofer](https://github.com/gjtorikian/html-proofer) via Docker Compose: `make html-proofer`
-- Check output errors (if exist) and fix it!
+- Run [markdownlint-cli](https://www.npmjs.com/package/markdownlint-cli) via Docker Compose: `make markdownlint-lint`
 
 ## Author
 

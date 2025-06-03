@@ -1,0 +1,26 @@
+{
+  "item.label.🚀 Старт": {
+    "message": "🚀 Start",
+    "description": "Navbar item with label 🚀 Старт"
+  },
+  "item.label.⁉️ FAQ": {
+    "message": "⁉️ FAQ",
+    "description": "Navbar item with label ⁉️ FAQ"
+  },
+  "item.label.📚 Туториалы": {
+    "message": "📚 Tutorials",
+    "description": "Navbar item with label 📚 Туториалы"
+  },
+  "item.label.🚑 Ошибки и проблемы": {
+    "message": "🚑 Errors & problems",
+    "description": "Navbar item with label 🚑 Ошибки и проблемы"
+  },
+  "title": {
+    "message": "Telepost FAQ",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Telepost Logo",
+    "description": "The alt text of navbar logo"
+  }
+}

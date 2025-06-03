@@ -1,0 +1,53 @@
+---
+description: Как сделать текст/медия скрытым в формате Native, Markdown, HTML
+tags:
+  - Туториал
+  - Пост
+  - Текст
+  - Бот
+  - Веб-версия
+---
+
+# Скрытый текст (spoiler)
+
+[Сделать текст/медия скрытым](https://telegram.org/blog/reactions-spoilers-translations/ru#skritii-tekst) (показывается при нажатии — spoiler) в Телепосте можно в нескольких вариантах форматирования: Native, Markdown, HTML.
+
+## Бот
+
+В боте спройлер поддерживается во всех режимах:
+
+<!-- markdownlint-disable-next-line MD033 -->
+* **[Native](native-mode.mdx)** — просто выделите текст/медиа и во всплывающем меню выберите <kbd>Форматирование</kbd> → <kbd>Скрытый</kbd>:
+  ![image](https://user-images.githubusercontent.com/24430718/220902300-12d4e906-9a61-46e1-8351-dc9e933a4dab.jpg)
+  ![image](https://user-images.githubusercontent.com/24430718/220902421-bbe8b785-1f02-439e-a366-d03f1cb672b4.jpg)
+
+* **[Markdown](https://core.telegram.org/bots/api#markdownv2-style)** — оберните в парные символы `||`:
+
+  ```text
+  Дальше будет ||спойлер||
+  ```
+
+* **[HTML](https://core.telegram.org/bots/api#html-style)** — оберните в тег `<tg-spoiler></tg-spoiler>` или `<span class="tg-spoiler"></span>`:
+
+  ```html
+  <tg-spoiler>спойлер</tg-spoiler>
+  ```
+
+  или
+
+  ```html
+  <span class="tg-spoiler">спойлер</span>
+  ```
+
+## Веб-версия
+
+В веб-версии сделать спойлер можно следующими способами:
+
+* в **обычном режиме редактора** — выделите текст и отформатируете как на скриншоте ниже:
+  ![image](https://user-images.githubusercontent.com/24430718/220900766-1d10c6f4-1255-42da-b95f-5c6e93044d7f.png)
+
+  Текст будет виден, но подсвечиваться желтым цветом:
+  ![image](https://user-images.githubusercontent.com/24430718/220914642-03e7e20c-d612-4e1b-af6d-d295ba899058.png)
+
+* в **режиме редактора Markdown** — оберните в парные символы `||`:
+  ![image](https://user-images.githubusercontent.com/24430718/220951037-e234d0e3-e478-4e90-9c6d-46b0017e8bfb.png)

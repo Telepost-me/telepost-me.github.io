@@ -1,40 +1,42 @@
 ---
-# See .env for variables
-
 name: ${DOCKER_COMPOSE_NAME}
-services:
-  jekyll-site:
-    image: ${DOCKER_COMPOSE_JEKYLL_IMAGE}
-    container_name: ${DOCKER_COMPOSE_JEKYLL_CONTAINER}
-    volumes:
-      - ./:${DOCKER_COMPOSE_JEKYLL_PATH}
-    ports:
-      - ${DOCKER_COMPOSE_JEKYLL_PORT}:4000
-      - 35729:35729
-    command: jekyll serve ${DOCKER_COMPOSE_JEKYLL_OPTIONS}
 
-  jekyll-build:
-    image: ${DOCKER_COMPOSE_JEKYLL_IMAGE}
-    container_name: ${DOCKER_COMPOSE_JEKYLL_CONTAINER}-build
+services:
+  docusaurus-run:
+    image: ${DOCKER_COMPOSE_DOCUSAURUS_IMAGE}
+    container_name: ${DOCKER_COMPOSE_DOCUSAURUS_CONTAINER}
+    ports:
+      - ${DOCKER_COMPOSE_DOCUSAURUS_PORT}:3000
     volumes:
-      - ./:${DOCKER_COMPOSE_JEKYLL_PATH}
-    command: jekyll build
+      - ${PWD}/:${DOCKER_COMPOSE_DOCUSAURUS_PATH}/
+    working_dir: ${DOCKER_COMPOSE_DOCUSAURUS_PATH}
+    environment:
+      FORCE_COLOR: 1
+    command:
+      - bash
+      - -c
+      - |
+        npm install
+        npm run clear
+        npm run build
+        npm run ${DOCKER_COMPOSE_DOCUSAURUS_RUN_MODE} ${DOCKER_COMPOSE_DOCUSAURUS_OPTIONS}
 
   yaml-lint:
     image: ${DOCKER_COMPOSE_YAMLLINT_IMAGE}
     container_name: ${DOCKER_COMPOSE_YAMLLINT_CONTAINER}
     volumes:
-      - ./:${DOCKER_COMPOSE_YAMLLINT_PATH}
+      - ${PWD}/:${DOCKER_COMPOSE_YAMLLINT_PATH}
     working_dir: ${DOCKER_COMPOSE_YAMLLINT_PATH}
+    environment:
+      FORCE_COLOR: 1
     command: ${DOCKER_COMPOSE_YAMLLINT_OPTIONS} .
 
-  html-proofer:
-    image: ${DOCKER_COMPOSE_HTMLPROOFER_IMAGE}
-    container_name: ${DOCKER_COMPOSE_HTMLPROOFER_CONTAINER}
-    depends_on:
-      jekyll-build:
-        condition: service_completed_successfully
+  markdown-lint:
+    image: ${DOCKER_COMPOSE_MARKDOWNLINT_IMAGE}
+    container_name: ${DOCKER_COMPOSE_MARKDOWNLINT_CONTAINER}
     volumes:
-      - ./_site:${DOCKER_COMPOSE_HTMLPROOFER_PATH}
-    working_dir: ${DOCKER_COMPOSE_HTMLPROOFER_PATH}
-    command: ${DOCKER_COMPOSE_HTMLPROOFER_PATH} ${DOCKER_COMPOSE_HTMLPROOFER_OPTIONS}
+      - ${PWD}/:${DOCKER_COMPOSE_MARKDOWNLINT_PATH}
+    working_dir: ${DOCKER_COMPOSE_MARKDOWNLINT_PATH}
+    environment:
+      FORCE_COLOR: 1
+    command: markdownlint ${DOCKER_COMPOSE_MARKDOWNLINT_OPTIONS}

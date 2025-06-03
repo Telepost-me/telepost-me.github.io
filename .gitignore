@@ -1,14 +1,20 @@
-_site
+# Dependencies
+/node_modules
+
+# Production
+/build
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Misc
 .DS_Store
-.jekyll
-.jekyll-metadata
-.bundle
-.sass-cache
-Gemfile.lock
-node_modules
-package.json
-*.gem
-*.gemspec
-.jekyll-cache
-.vendor/
-vendor/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

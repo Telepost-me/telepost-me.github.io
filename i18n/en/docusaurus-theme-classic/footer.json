@@ -1,0 +1,50 @@
+{
+  "link.title.Telepost": {
+    "message": "Telepost",
+    "description": "The title of the footer links column with title=Telepost in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.GitHub issues": {
+    "message": "GitHub issues",
+    "description": "The title of the footer links column with title=GitHub issues in the footer"
+  },
+  "link.item.label.Telepost.me": {
+    "message": "Telepost.me",
+    "description": "The label of footer link with label=Telepost.me linking to https://telepost.me"
+  },
+  "link.item.label.app.telepost.me": {
+    "message": "app.telepost.me",
+    "description": "The label of footer link with label=app.telepost.me linking to https://app.telepost.me"
+  },
+  "link.item.label.@TelepostBot": {
+    "message": "@TelepostBot",
+    "description": "The label of footer link with label=@TelepostBot linking to https://t.me/TelepostBot"
+  },
+  "link.item.label.Telepost чат": {
+    "message": "Telepost чат",
+    "description": "The label of footer link with label=Telepost чат linking to https://t.me/joinchat/Ypg01CdfpW5jNWFi"
+  },
+  "link.item.label.GitHub issues": {
+    "message": "GitHub issues",
+    "description": "The label of footer link with label=GitHub issues linking to https://github.com/Telepost-me/support/issues?q=is%3Aissue"
+  },
+  "link.item.label.Instatus Dashboard": {
+    "message": "Instatus Dashboard",
+    "description": "The label of footer link with label=Instatus Dashboard linking to https://telepost.instatus.com"
+  },
+  "link.item.label.🐞 Bugs": {
+    "message": "🐞 Bugs",
+    "description": "The label of footer link with label=🐞 Bugs linking to https://github.com/Telepost-me/support/issues?q=is%3Aissue+state%3Aopen+label%3Abug"
+  },
+  "link.item.label.💡 Ideas": {
+    "message": "💡 Ideas",
+    "description": "The label of footer link with label=💡 Ideas linking to https://github.com/Telepost-me/support/issues?q=is%3Aissue+state%3Aopen+label%3Aidea"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 Telepost. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
