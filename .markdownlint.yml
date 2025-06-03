@@ -1,7 +1,14 @@
 ---
-# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md
 MD013: false
 
-# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md026
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/md026.md
 MD026:
   punctuation: "!"
+
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md
+MD033:
+  allowed_elements:
+    - details
+    - summary
+    - kbd

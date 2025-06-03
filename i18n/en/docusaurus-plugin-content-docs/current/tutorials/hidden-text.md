@@ -10,7 +10,6 @@ source:
 
 # "Hidden Continue"
 
-<!-- markdownlint-disable-next-line MD033 -->
 In order to motivate users to subscribe to your channel, you can intrigue them with hidden text. The user can just go in, see what is needed and forget to subscribe. The <kbd>Hidden Continue</kbd> button solves this problem.
 
 When you click on the button, the text will be visible to the channel subscribers, and to those who are not subscribed to the channel — a message (specified by you) about the need to subscribe:
@@ -27,7 +26,6 @@ If the user is **not** subscribed to the channel, then user sees, for example, t
 
 How to do it?
 
-<!-- markdownlint-disable-next-line MD033 -->
 In a post with type "Text", click <kbd>Hidden continue</kbd>:
 
 ![image](https://user-images.githubusercontent.com/24430718/107146756-2e05bb00-695b-11eb-9459-e874ee18d90a.png)
@@ -45,13 +43,9 @@ For example, like this:
 There are a few limitations that are important for you to be aware of. These limitations are related to the capabilities of the messenger itself, but we hope that Telegram will fix all this:
 
 1. It makes no sense to insert a link into this button, because it will not be clickable.
-
-2. The text that can be inserted into such a button cannot exceed 200 characters.
-
-3. Buttons conflict with native comments that recently appeared in Telegram. That is, if you add a button, then [comments will disappear under the post](../faq/telegram-comments.mdx).
-
-   <!-- markdownlint-disable-next-line MD033 -->
-4. Inline-buttons (the button <kbd>Hidden continue</kbd> - just like that) cannot be sent along with the post - when forwarding the post, such buttons disappear (exception: if there is only url-buttons under the post). In this case, you need to send the link to the post, and not forward the post itself.
+1. The text that can be inserted into such a button cannot exceed 200 characters.
+1. Buttons conflict with native comments that recently appeared in Telegram. That is, if you add a button, then [comments will disappear under the post](../faq/telegram-comments.mdx).
+1. Inline-buttons (the button <kbd>Hidden continue</kbd> - just like that) cannot be sent along with the post - when forwarding the post, such buttons disappear (exception: if there is only url-buttons under the post). In this case, you need to send the link to the post, and not forward the post itself.
 
 ## Statistics
 
@@ -64,11 +58,7 @@ To view statistics of button clicks, open the page with published posts — at t
 ![image](https://user-images.githubusercontent.com/24430718/109558669-c3274a00-7aea-11eb-9ab3-897eb1e45988.png)
 
 * **Clicks** - the total number of all clicks on the hidden continue button.
-
 * **Unique** - unique users who clicked on the hidden continue button.
-
 * **Subscribed** - the number of users who clicked subscribe after continuing.
-
 * **Remaining** - the number of users from the list of subscribers after switching to the continue who are currently subscribed to the channel.
-
 * **Not subscribed** - users who were not subscribed and did not subscribe after switching to a hidden continue.
