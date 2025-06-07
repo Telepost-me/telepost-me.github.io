@@ -1,5 +1,5 @@
 <!-- markdownlint-disable-next-line MD033 -->
-# <a href="https://telepost.me/">Telepost</a> <img src="static/img/telepost_icon-194x194.png" alt="Telepost logo" align="right" />
+# <a href="https://telepost.me/">Telepost</a> <img src="static/assets/telepost_icon-194x194.png" alt="Telepost logo" align="right" />
 
 [![Linters](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/linters.yml/badge.svg)](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/linters.yml)
 [![Pages Deploy](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Telepost-me/telepost-me.github.io/actions/workflows/deploy.yml)
