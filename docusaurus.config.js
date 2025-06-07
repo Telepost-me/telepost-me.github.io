@@ -13,7 +13,7 @@ import globalVariables from './src/custom/globalVariables.js';
 const config = {
   title: 'Telepost FAQ',
   tagline: 'Прежде, чем задавать вопрос — поищи ответ здесь!',
-  favicon: 'img/favicon.ico',
+  favicon: 'assets/favicon.ico',
 
   // Set the production url of your site here
   url: `https://${globalVariables.github.projectRepository}`,
@@ -76,7 +76,7 @@ const config = {
         title: 'Telepost FAQ',
         logo: {
           alt: 'Telepost Logo',
-          src: 'img/telepost_icon-194x194.png',
+          src: 'assets/telepost_icon-194x194.png',
         },
         items: [
           {

@@ -51,7 +51,7 @@ export default function NotFoundContent({className}) {
           </p>
           <div style={{textAlign: 'center', marginTop: '3rem'}}>
             <img
-              src={useBaseUrl('/img/travolta.gif')}
+              src={useBaseUrl('/assets/travolta.gif')}
               alt="Confused Travolta"
               style={{
                 maxWidth: '450px',
