@@ -14,29 +14,29 @@ In order to motivate users to subscribe to your channel, you can intrigue them w
 
 When you click on the button, the text will be visible to the channel subscribers, and to those who are not subscribed to the channel — a message (specified by you) about the need to subscribe:
 
-![image](https://user-images.githubusercontent.com/24430718/107146681-c0f22580-695a-11eb-86eb-c206a5ba2201.png)
+![image](/images/107146681-c0f22580-695a-11eb-86eb-c206a5ba2201.png)
 
 When clicking on the button, the subscriber sees the text:
 
-![image](https://user-images.githubusercontent.com/24430718/107146733-03b3fd80-695b-11eb-8f13-8808fbbbd7fd.png)
+![image](/images/107146733-03b3fd80-695b-11eb-8f13-8808fbbbd7fd.png)
 
 If the user is **not** subscribed to the channel, then user sees, for example, the following message:
 
-![image](https://user-images.githubusercontent.com/24430718/107146744-16c6cd80-695b-11eb-9372-8d94d16416b7.png)
+![image](/images/107146744-16c6cd80-695b-11eb-9372-8d94d16416b7.png)
 
 How to do it?
 
 In a post with type "Text", click <kbd>Hidden continue</kbd>:
 
-![image](https://user-images.githubusercontent.com/24430718/107146756-2e05bb00-695b-11eb-9459-e874ee18d90a.png)
+![image](/images/107146756-2e05bb00-695b-11eb-9459-e874ee18d90a.png)
 
 You can fill in at your own discretion:
 
-![image](https://user-images.githubusercontent.com/24430718/107146763-3bbb4080-695b-11eb-8399-de95b3df5206.png)
+![image](/images/107146763-3bbb4080-695b-11eb-8399-de95b3df5206.png)
 
 For example, like this:
 
-![image](https://user-images.githubusercontent.com/24430718/107146772-47a70280-695b-11eb-8e93-7964b431f549.png)
+![image](/images/107146772-47a70280-695b-11eb-8e93-7964b431f549.png)
 
 ## Limitations
 
@@ -51,11 +51,11 @@ There are a few limitations that are important for you to be aware of. These lim
 
 To view statistics of button clicks, open the page with published posts — at the top above the post with a hidden continue there is an icon with statistics:
 
-![image](https://user-images.githubusercontent.com/24430718/109558604-ad198980-7aea-11eb-8941-d010bd9486fb.png)
+![image](/images/109558604-ad198980-7aea-11eb-8941-d010bd9486fb.png)
 
 ### What do the hidden continue statistics mean?
 
-![image](https://user-images.githubusercontent.com/24430718/109558669-c3274a00-7aea-11eb-9ab3-897eb1e45988.png)
+![image](/images/109558669-c3274a00-7aea-11eb-9ab3-897eb1e45988.png)
 
 * **Clicks** - the total number of all clicks on the hidden continue button.
 * **Unique** - unique users who clicked on the hidden continue button.
