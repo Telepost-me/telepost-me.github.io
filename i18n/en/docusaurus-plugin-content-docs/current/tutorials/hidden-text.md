@@ -1,4 +1,5 @@
 ---
+sidebar_position: 10
 description: You can hide under the button some text, which will be seen only by channel subscribers
 tags:
   - Tutorial
