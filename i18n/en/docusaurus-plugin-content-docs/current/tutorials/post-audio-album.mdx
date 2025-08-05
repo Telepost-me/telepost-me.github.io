@@ -31,8 +31,4 @@ There are a few restrictions that are important for you to be aware of. These li
 
 * You can upload maximum 10 files in one post
 
-* Although there is nothing about this in the [documentation](https://core.telegram.org/bots/api#sendmediagroup), it has been experimentally found out that the total size of all files should not exceed 50 MB. Otherwise, the request exceeds the limit, and when you try to publish a post (in the preview in the bot, everything can work at the same time) the following error occurrs:
-
-  ![image](/images/131265380-c51aba6e-189d-45b0-bb81-fe33f6faaed5.png)
-
-  You can bypass the limitation only by splitting the post into several, so that each post does not exceed the specified limit.
+* The total size of all files must not exceed 50 MB, otherwise you may get [`Request Entity Too Large` error](../errors/error-request-entity-too-large).
