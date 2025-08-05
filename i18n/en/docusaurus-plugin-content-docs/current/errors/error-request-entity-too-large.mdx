@@ -1,0 +1,18 @@
+---
+description: It looks like your post album size is too big.
+tags:
+  - Error
+  - WeWeb UI
+---
+
+# Error `Request Entity Too Large`
+
+Sometimes when trying to publish a post with the type "Album" (and the album can be from photos/videos, audio files or documents, it does not matter) at the time of preview the post and/or directly at the time of publication, an error like `Publish message <...> error: 413: Request Entity Too Large` may appear:
+
+![image](/images/131265380-c51aba6e-189d-45b0-bb81-fe33f6faaed5.png)
+
+Although there is nothing about this in the [documentation](https://core.telegram.org/bots/api#sendmediagroup), but empirically it has been established that the total size of all files should not exceed 50 MB. Otherwise, the request size exceeds the limit, and you can get an error as in the screenshot above.
+
+## Solution
+
+The only way to get around this limitation is to split the post into several so that each post does not exceed the specified limit.
