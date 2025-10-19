@@ -1,0 +1,25 @@
+---
+description: Check the bot permissions and the channel/chat has not been deleted
+tags:
+  - Error
+  - Web UI
+---
+
+# Error `chat not found`
+
+If you try to publish a post and receive the error "Unable to publish post" and see the phrase `chat not found` in the details, something like this:
+
+![image](/images/22372963-a4c96f0c-2a2a-459c-ba70-9a46b8bc7a1f.jpg)
+
+the reasons may be the following:
+
+1. the channel/chat to which Telepost was linked has been deleted, or the bot has simply been removed from the admin list.
+1. the Telepost bot lacks permission to edit channel information (the bot will also use this permission to check for the channel's existence):
+   ![image](/images/22372963-9fd2c3f7-f0a6-4be6-afe6-76c2f7f90959.jpg)
+
+## Solution
+
+Please check and fix the following:
+
+1. the channel/chat actually exists (not deleted), and the Telepost bot has been added as an administrator.
+1. the bot has sufficient rights: at a minimum, it needs permissions to edit channel information and manage messages.
