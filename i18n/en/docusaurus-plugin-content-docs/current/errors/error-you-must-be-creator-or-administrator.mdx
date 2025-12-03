@@ -1,0 +1,19 @@
+---
+description: The user who connected the bot is no longer the channel admin / owner
+tags:
+  - Error
+  - Bot
+  - Web UI
+---
+
+# Error `You must be creator, or administrator`
+
+In case the user connects the channel to the Telepost through the bot [{{ telepost.bot.name }}]({{ telepost.bot.url }}), and after that the user leaves the channel or stops being admin / owner in it then when trying to connect such a channel, the error `You must be creator, or administrator` will appear in the Web UI:
+
+![image](/images/254659536-b2284950-c780-4e00-89ff-7e07fa73f8b4.png)
+
+## Solution
+
+The user who connected the channel through the bot [{{ telepost.bot.name }}]({{ telepost.bot.url }}) needs to become an admin / owner in the channel again.
+
+It is also recommended to use your own custom bot, how to connect it - read in [this manual](../start/personal-bot-for-telepost.mdx).
