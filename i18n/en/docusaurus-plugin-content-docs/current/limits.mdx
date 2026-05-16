@@ -1,0 +1,54 @@
+---
+description: This page contains known Telepost limits and restrictions
+sidebar_position: 8
+---
+
+# Limits
+
+This page contains known Telepost limits and restrictions (found empirically).
+
+## Character limits in posts
+
+Each post type may have different limits:
+
+* Text: no more than 4000 characters
+* Photo: no more than 1024 characters
+
+## Data size in posts
+
+Each post type may have different limits:
+
+* Photo - an attempt to exceed the limit results in the [error "Check the entered data"](./errors/post-text-attach-error.mdx):
+  * size - no more than 5 MB
+  * resolution - no more than 5000 pixels wide or high
+
+* Album - an attempt to exceed the limit results in the [error `Request Entity Too Large`](./errors/error-request-entity-too-large.mdx):
+  * total size of all attached media files — no more than 50 MB
+
+## Number of posts
+
+No more than 500 posts per month.
+
+An attempt to exceed the limit results in the error message (`Error 429`): `Limit Exceeded`. Too many posts created today, max: 500. Also applies to [repeat posts](./tutorials/repeat-post.mdx).
+
+## Number of channels for publishing a post
+
+No more than 5 channels for (simultaneous) posting.
+
+If more than 5 are selected, the "Save" button becomes inactive. More details in [issue #22](https://github.com/Telepost-me/support/issues/22).
+
+## Number of uploaded files
+
+A maximum of 2000 files can be uploaded per day when creating posts.
+
+An attempt to exceed the limit results in the error message (`Error 429`): `Limit Exceeded. Max files uploaded today: 2000`.
+
+## Number of connected channels/chats
+
+No more than 200 connected channels/chats per account.
+
+An attempt to exceed the limit results in the error message: `Too many channels created. Maximum 200. More details in [issue #96](https://github.com/Telepost-me/support/issues/96).
+
+---
+
+Limits may change in the future, and in any direction.
