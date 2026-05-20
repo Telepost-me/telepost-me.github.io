@@ -15,7 +15,7 @@ In order to motivate users to subscribe to your channel, you can intrigue them w
 
 When you click on the button, the text will be visible to the channel subscribers, and to those who are not subscribed to the channel — a message (specified by you) about the need to subscribe:
 
-![image](/images/107146681-c0f22580-695a-11eb-86eb-c206a5ba2201.png)
+![image](/images/c0f22580-695a-11eb-86eb-c206a5ba2201.png)
 
 When clicking on the button, the subscriber sees the text:
 
