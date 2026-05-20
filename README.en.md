@@ -48,11 +48,15 @@ Don't forget to run linters after making changes! Run all linters: `make lint`
 
 ### YAML lint
 
-- Run [yamllint](https://yamllint.readthedocs.io/en/stable/) via Docker Compose: `make yaml-lint`
+- Run [yamllint](https://yamllint.readthedocs.io/en/stable/) via command: `make yaml-lint`
 
 ### Markdown lint
 
-- Run [markdownlint-cli](https://www.npmjs.com/package/markdownlint-cli) via Docker Compose: `make markdownlint-lint`
+- Run [markdownlint-cli](https://www.npmjs.com/package/markdownlint-cli) via command: `make markdownlint-lint`
+
+### Images names
+
+- Run the image name format validation for images in the [`static/images`](./static/images) folder (using the UUID4 format validation script, which can be generated on [www.uuidgenerator.net](https://www.uuidgenerator.net/version4)) using the command: `make images-lint`
 
 ## Author
 

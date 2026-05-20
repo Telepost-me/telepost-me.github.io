@@ -48,11 +48,15 @@ Telepost помогает администраторам каналов сокр
 
 ### YAML lint
 
-- Запустите проверку правильности синтаксиса YAML (используется [yamllint](https://yamllint.readthedocs.io/en/stable/)) с помощью Docker Compose командой: `make yaml-lint`
+- Запустите проверку правильности синтаксиса YAML (используется [yamllint](https://yamllint.readthedocs.io/en/stable/)) с помощью команды: `make yaml-lint`
 
 ### Markdown lint
 
-- Запустите проверку правильности синтаксиса Markdown (используется [markdownlint-cli](https://www.npmjs.com/package/markdownlint-cli)) с помощью Docker Compose командой: `make markdownlint-lint`
+- Запустите проверку правильности синтаксиса Markdown (используется [markdownlint-cli](https://www.npmjs.com/package/markdownlint-cli)) с помощью команды: `make markdownlint-lint`
+
+### Images names
+
+- Запустите проверку правильности формата имен изображений в папке [`static/images`](./static/images) (используется скрипт проверки на формат UUID4 — его можно сгенерировать на сайте [www.uuidgenerator.net](https://www.uuidgenerator.net/version4)) с помощью команды: `make images-lint`
 
 ## Автор
 
