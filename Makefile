@@ -22,8 +22,14 @@ markdown-lint:
 	@echo "-> Lint Markdown files..."
 	@docker compose up markdown-lint
 
+.PHONY: images-lint
+images-lint:
+	@echo
+	@echo "-> Lint image names (UUID format)..."
+	@docker compose up images-lint
+
 .PHONY: lint
-lint: yaml-lint markdown-lint
+lint: yaml-lint markdown-lint images-lint
 
 .PHONY: clear
 clear:

@@ -40,3 +40,42 @@ services:
     environment:
       FORCE_COLOR: 1
     command: markdownlint ${DOCKER_COMPOSE_MARKDOWNLINT_OPTIONS}
+
+  images-lint:
+    image: ${DOCKER_COMPOSE_IMAGELINT_IMAGE}
+    container_name: ${DOCKER_COMPOSE_IMAGELINT_CONTAINER}
+    volumes:
+      - ${PWD}/:${DOCKER_COMPOSE_IMAGELINT_PATH}
+    working_dir: ${DOCKER_COMPOSE_IMAGELINT_PATH}
+    environment:
+      FORCE_COLOR: 1
+    command:
+      - bash
+      - -c
+      - |
+        VALID_FORMAT_REGEX="^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(jpg|jpeg|png)$$"
+        ERRORS=0
+        echo "Checking image names in ${DOCKER_COMPOSE_IMAGELINT_IMAGES_FOLDER}..."
+        echo
+        while IFS= read -r file
+        do
+          filename=$$(basename "$$file")
+          if [[ "$$filename" == .* ]]
+          then
+            continue
+          fi
+          if ! [[ "$$filename" =~ $$VALID_FORMAT_REGEX ]]
+          then
+            echo "❌ INVALID: $$filename"
+            ((ERRORS++))
+          fi
+        done < <(find "${DOCKER_COMPOSE_IMAGELINT_IMAGES_FOLDER}" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \))
+        if [ $$ERRORS -eq 0 ]
+        then
+          echo "✅ All images have valid UUID name format"
+          exit 0
+        else
+          echo
+          echo "❌ Found $$ERRORS invalid image name(s)"
+          exit 1
+        fi
